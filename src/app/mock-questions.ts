@@ -23,7 +23,7 @@ import { Question } from './question';
       title: `
               const numbers = [2, 4, 8];
               const mappedNumbers = numbers.map((x) => x * 2);
-              const filteredNumbers = numbers.filter((x) => x % 2 == 0);
+              const filteredNumbers = numbers.filter((x) => x % 2 === 0);
               const productOfNumbers = numbers.reduce((x, y) => x * y);
               const sumOfNumbers = numbers.reduce((x, y) => x + y);
       `,
@@ -79,7 +79,7 @@ import { Question } from './question';
               const sumOfNumbers = numbers.reduce((x, y) => x + y);
       `,
       answers: [
-        '[4, 8, 16]', '[8, 16, 32]', '[16, 32, 64]', '[32, 64, 128]', '[64, 128, 256]'
+        '64', '13', '4', '2', '8'
       ],
       correct: 0
     },

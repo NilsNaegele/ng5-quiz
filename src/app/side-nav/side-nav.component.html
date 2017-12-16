@@ -1,0 +1,17 @@
+<mat-list>
+    <h3 mat-subheader>My Technologies</h3>
+    <mat-list-item *ngFor="let technology of technologies">
+      <mat-icon mat-list-icon>sentiment_very_satisfied</mat-icon>
+      <h4 mat-line>{{ technology.name }}</h4>
+      <a mat-mini-fab color="accent" href="{{ technology.url}}"
+      target="_blank" mat-line>Go!</a>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+    <h3 mat-subheader>My Projects</h3>
+    <mat-list-item *ngFor="let technology of myTechnologies">
+      <mat-icon mat-list-icon>developer_mode</mat-icon>
+      <h4 mat-line>{{ technology.name }}</h4>
+      <a mat-mini-fab color="primary" href="{{ technology.url}}"
+      target="_blank" mat-line>Visit!</a>
+    </mat-list-item>
+</mat-list>

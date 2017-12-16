@@ -1,0 +1,7 @@
+<div *ngIf="technology">
+    <h2>{{ technology.name | uppercase }} Details</h2>
+    <div><span>id: </span>{{ technology.id }}</div>
+    <mat-form-field>
+        <input matInput [(ngModel)]="technology.name" placeholder="technology">
+    </mat-form-field>
+</div>

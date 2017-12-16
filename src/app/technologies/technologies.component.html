@@ -1,0 +1,19 @@
+<mat-card class="card main-route-details">
+    <mat-card-content>
+        <h1>{{ title }}</h1>
+          <h2>My Technologies</h2>
+          <mat-list role="list" class="technologies">
+              <mat-list-item *ngFor="let technology of technologies"
+                [class.selected]="technology === selectedTechnology"
+                (click)="onSelect(technology)"
+                role="listitem">
+               <span class="badge">{{ technology.id }}</span>{{ technology.name }}
+              </mat-list-item>
+          </mat-list>
+            <app-technology-detail [technology]="selectedTechnology"></app-technology-detail>
+    </mat-card-content>
+    <mat-card-actions>
+      <!-- <app-messages></app-messages> -->
+    </mat-card-actions>
+  </mat-card>
+
