@@ -1,13 +1,26 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostBinding } from '@angular/core';
+import { trigger, transition, style, animate, stagger, query, useAnimation } from '@angular/animations';
+import { PAGE_IN_ANIMATION, PAGE_OUT_ANIMATION } from '../app.route-animations';
+
+import { Technology } from '../technology';
 import { TechnologyService } from './../technology.service';
+
 
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
+  styleUrls: ['./dashboard.component.css'],
+  animations: [
+    trigger('pageAnimations', [
+      transition(':enter', useAnimation(PAGE_IN_ANIMATION)),
+      transition(':leave', useAnimation(PAGE_OUT_ANIMATION))
+    ])
+  ]
 })
 export class DashboardComponent implements OnInit {
-  technologies;
+  @HostBinding('@pageAnimations')
+  public animationPage = true;
+  technologies: Technology[] = [];
   constructor(private technologyService: TechnologyService) { }
 
   getTechnologies(): void {

@@ -16,7 +16,7 @@ import { Question } from '../question';
       transition(':enter', useAnimation(PAGE_IN_ANIMATION)),
       transition(':leave', useAnimation(PAGE_OUT_ANIMATION))
     ]),
-    trigger('heroState', [
+    trigger('technologyState', [
       state('inactive', style({transform: 'translateX(0) scale(1)'})),
       state('active',   style({transform: 'translateX(0) scale(1.2)'})),
       transition('inactive => active', animate('900ms ease-in')),
