@@ -168,7 +168,7 @@ import { Question } from './question';
       title: `
       if (!booleanValue && stringValue === "Open Source") {
 
-      } else if (booleanValue || intValue == 0) {
+      } else if (booleanValue || intValue === 0) {
 
       } else {
 

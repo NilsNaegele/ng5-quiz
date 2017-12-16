@@ -1,4 +1,4 @@
-<mat-card *ngIf="!showQuizCompleted" class="card">
+<mat-card *ngIf="!showQuizCompleted" [@heroState]="state" class="card main-route-details">
     <mat-card-header>
       <div mat-card-avatar class="example-header-image"></div>
       <mat-card-title>Question {{ question.id }} of {{ totalQuestions }}</mat-card-title>
@@ -26,7 +26,7 @@
     </mat-card-actions>
   </mat-card>
 
-  <mat-card *ngIf="showQuizCompleted" class="card">
+  <mat-card *ngIf="showQuizCompleted" class="card main-route-details">
       <mat-card-header>
         <div mat-card-avatar class="example-header-image"></div>
         <mat-card-title>Congratulations:</mat-card-title>
