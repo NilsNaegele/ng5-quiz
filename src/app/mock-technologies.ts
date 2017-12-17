@@ -8,7 +8,7 @@ export const TECHNOLOGIES: Technology[] = [
     { id: 15, name: 'HTML', url: 'http://apprize.info/html5/pic.jpg' },
     { id: 16, name: 'CSS', url: 'http://www.demacmedia.com/wp-content/uploads/2014/12/css3_2.jpg' },
     { id: 17, name: 'Ionic 3', url: 'https://cdn-enterprise.discourse.org/ionicframework/uploads/default/original/3X/5/9/59963d686139d1fcb1fb2385ec12883b7d9d97a2.jpg' },
-    { id: 18, name: 'EcmaScript 6', url: 'https://assets.hongkiat.com/uploads/thumbs/640x410/ecmascript-6-twitter.jpg' },
+    { id: 18, name: 'EcmaScript 6', url: 'https://cdn-images-1.medium.com/max/840/1*6-bW-_sbW9nhe7Wa8uFPKQ.png' },
     { id: 19, name: 'Firebase', url: 'https://firebase.google.com/images/social.png' },
     { id: 20, name: 'Google Cloud Platform', url: 'https://dod25w4a8jvuu.cloudfront.net/blog/wp-content/uploads/2017/03/google-cloud-logo.png' }
 ];
