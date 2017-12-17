@@ -1,9 +1,9 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
 import { Router } from '@angular/router';
-import { QUESTIONS } from '../mock-questions';
 import { trigger, transition, style, state, animate, stagger, query, useAnimation } from '@angular/animations';
 import { PAGE_IN_ANIMATION, PAGE_OUT_ANIMATION } from '../app.route-animations';
-
+import { MatSnackBar } from '@angular/material';
+import { QUESTIONS } from '../mock-questions';
 import { QuizService } from '../quiz.service';
 import { Question } from '../question';
 
@@ -51,7 +51,17 @@ export class QuizComponent implements OnInit {
   showQuizCompleted = false;
   result = 0;
 
-  constructor(private router: Router, private quizService: QuizService) { }
+  constructor(private router: Router,
+              private snackBar: MatSnackBar,
+              private quizService: QuizService) {
+                this.openSnackBar();
+               }
+
+  openSnackBar() {
+    this.snackBar.open('Quiz Time', 'Quiz Me', {
+      duration: 2000,
+    });
+  }
 
   retakeQuiz() {
     this.router.navigate(['/home']);

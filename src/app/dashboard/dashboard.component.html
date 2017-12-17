@@ -2,13 +2,13 @@
     <mat-card class="card-header">
       <h4>Top Technologies</h4>
     </mat-card>
-     <a *ngFor="let technology of technologies">
+     <ng-container *ngFor="let technology of technologies">
       <mat-grid-tile>
-        <mat-card class="card">
+        <mat-card class="card" routerLink="/detail/{{ technology.id }}">
             <mat-card-content>
               {{ technology.name }}
             </mat-card-content>
         </mat-card>
       </mat-grid-tile>
-    </a>
+    </ng-container>
 </mat-grid-list>

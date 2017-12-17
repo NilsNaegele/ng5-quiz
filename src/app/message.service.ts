@@ -2,10 +2,10 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class MessageService {
-  messages: string[] = [];
+  messages: string[] = ['TechnologyService: fetched technologies'];
 
   add(message: string): void {
-    this.messages.push(message);
+    // this.messages.push(message);
   }
 
   clear(): void {

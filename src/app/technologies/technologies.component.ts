@@ -24,26 +24,21 @@ export class TechnologiesComponent implements OnInit {
   title = 'Tour of Technologies';
 
   technologies: Technology[] = [];
-  selectedTechnology: Technology;
 
   getTechnologies(): void {
     this.technologyService.getTechnologies()
                           .subscribe(technologies => this.technologies = technologies);
   }
 
-  onSelect(technology: Technology): void {
-    this.selectedTechnology = technology;
-  }
-
   constructor(private technologyService: TechnologyService,
-              private MessageService: MessageService,
+              private messageService: MessageService,
               private snackBar: MatSnackBar) {
                 this.openSnackBar();
                }
 
   openSnackBar() {
-    const messages = this.MessageService.messages;
-    this.snackBar.open(messages[0], 'Messages', {
+    const messages = this.messageService.messages;
+    this.snackBar.open(messages.slice(-1).pop(), 'Messages', {
       duration: 2000,
     });
   }

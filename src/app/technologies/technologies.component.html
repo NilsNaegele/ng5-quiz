@@ -4,13 +4,12 @@
           <h2>My Technologies</h2>
           <mat-list role="list" class="technologies">
               <mat-list-item *ngFor="let technology of technologies"
-                [class.selected]="technology === selectedTechnology"
-                (click)="onSelect(technology)"
-                role="listitem">
-               <span class="badge">{{ technology.id }}</span>{{ technology.name }}
+                role="listitem">#
+               <a routerLink="/detail/{{ technology.id }}">
+                    <span class="badge">{{ technology.id }}</span>{{ technology.name }}
+               </a>
               </mat-list-item>
           </mat-list>
-            <app-technology-detail [technology]="selectedTechnology"></app-technology-detail>
     </mat-card-content>
     <mat-card-actions>
       <!-- <app-messages></app-messages> -->

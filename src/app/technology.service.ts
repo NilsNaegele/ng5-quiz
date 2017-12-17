@@ -14,8 +14,13 @@ export class TechnologyService {
   constructor(private messageService: MessageService) { }
 
   getTechnologies(): Observable<Technology[]> {
-    this.messageService.add('TechnologyService: fetched technologies');
+    // this.messageService.add('TechnologyService: fetched technologies');
     return of(TECHNOLOGIES);
+  }
+
+  getTechnology(id: number): Observable<Technology> {
+    this.messageService.add(`TechnologyService: fetched technology id=${id}`);
+    return of(TECHNOLOGIES.find(technology => technology.id === id));
   }
 
 }

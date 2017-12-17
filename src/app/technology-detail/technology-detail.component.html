@@ -1,7 +1,20 @@
-<div *ngIf="technology">
-    <h2>{{ technology.name | uppercase }} Details</h2>
-    <div><span>id: </span>{{ technology.id }}</div>
-    <mat-form-field>
-        <input matInput [(ngModel)]="technology.name" placeholder="technology">
-    </mat-form-field>
-</div>
+<mat-card class="card main-route-details">
+    <img mat-card-image
+    [src]="technology.url"
+    style="width: 848px; height: 332px;"
+    alt="Image of {{ technology.name }}">
+    <mat-card-content>
+        <div *ngIf="technology">
+            <h2>{{ technology.name | uppercase }} Details</h2>
+            <div><span>id: </span>{{ technology.id }}</div>
+            <mat-form-field>
+                <input matInput [(ngModel)]="technology.name" placeholder="technology">
+            </mat-form-field>
+        </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" (click)="goBack()" mat-button>
+        Back
+      </button>
+    </mat-card-actions>
+  </mat-card>

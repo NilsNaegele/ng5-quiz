@@ -24,18 +24,29 @@
   margin: .5em;
   padding: .3em 0;
   height: 1.6em;
-  width: 15em;
+  width: 16em !important;
   border-radius: 5px;
 }
-.technologies mat-list-item.selected:hover {
+.technologies mat-list-item:hover {
   background-color: rgb(79, 26, 165) !important;
   color: white;
-}
-.technologies mat-list-item:hover {
-  color: rgb(240, 243, 245);
-  background-color: rgb(16, 69, 243);
   left: .1em;
 }
+
+
+.technologies a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  position: relative;
+  display: block;
+  width: 15em;
+}
+
+.technologies a:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgb(79, 26, 165);
+}
+
 .technologies .text {
   position: relative;
   top: -3px;
@@ -48,7 +59,7 @@
   background-color: rgb(2, 3, 4);
   line-height: 1em;
   position: relative;
-  left: -15px;
+  left: -27px;
   height: 1.8em;
   margin-right: .8em;
   border-radius: 4px 0 0 4px;

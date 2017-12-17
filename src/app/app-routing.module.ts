@@ -5,6 +5,7 @@ import { HomeComponent } from './home/home.component';
 import { QuizComponent } from './quiz/quiz.component';
 import { TechnologiesComponent } from './technologies/technologies.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { TechnologyDetailComponent } from './technology-detail/technology-detail.component';
 
 const routes: Routes = [
   {
@@ -18,6 +19,10 @@ const routes: Routes = [
   {
     path: 'dashboard',
     component: DashboardComponent
+  },
+  {
+    path: 'detail/:id',
+    component: TechnologyDetailComponent
   },
   {
     path: 'technologies',
