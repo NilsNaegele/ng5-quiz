@@ -1,0 +1,18 @@
+<div id="search-component">
+  <h4>Technology Search</h4>
+  <form class="example-form">
+      <mat-form-field class="example-full-width">
+        <input matInput #searchBox id="search-box"
+        (keyup)="search(searchBox.value)"
+        placeholder="Search" >
+      </mat-form-field>
+      <mat-list role="list" class="search-result">
+          <mat-list-item *ngFor="let technology of technologies$ | async"
+          role="listitem">
+          <a routerLink="/detail/{{ technology.id }}">
+            {{ technology.name }}
+          </a>
+        </mat-list-item>
+      </mat-list>
+  </form>
+</div>

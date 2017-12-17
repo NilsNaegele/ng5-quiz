@@ -23,6 +23,7 @@ import { QuizService } from './quiz.service';
 import { TechnologyService } from './technology.service';
 import { MessageService } from './message.service';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { TechnologySearchComponent } from './technology-search/technology-search.component';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     TechnologiesComponent,
     TechnologyDetailComponent,
     MessagesComponent,
-    DashboardComponent
+    DashboardComponent,
+    TechnologySearchComponent
   ],
   imports: [
     BrowserAnimationsModule,

@@ -31,10 +31,19 @@ export class TechnologyService {
     };
   }
 
-
-
   constructor(private http: HttpClient,
               private messageService: MessageService) { }
+
+  searchTechnologies(term: string): Observable<Technology[]> {
+    if (!term.trim()) {
+      return of([]);
+    }
+    return this.http.get<Technology[]>(`${this.technologiesURL}/?name=${term}`).pipe(
+      tap(() => this.log(`found technologies matching "${term}"`)),
+      catchError(this.handleError<Technology[]>('searchTechnologies', []))
+    );
+
+  }
 
   addTechnology(technology: Technology): Observable<Technology> {
           return this.http.post<Technology>(this.technologiesURL, technology, httpOptions)
