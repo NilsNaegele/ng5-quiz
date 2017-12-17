@@ -2,6 +2,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { MaterialModule } from './material.module';
 import { AppRoutingModule } from './app-routing.module';
@@ -18,12 +19,15 @@ import { FooterComponent } from './footer/footer.component';
 import { TechnologiesComponent } from './technologies/technologies.component';
 import { TechnologyDetailComponent } from './technology-detail/technology-detail.component';
 import { MessagesComponent } from './messages/messages.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { TechnologySearchComponent } from './technology-search/technology-search.component';
+import { ImagesComponent } from './images/images.component';
 
 import { QuizService } from './quiz.service';
 import { TechnologyService } from './technology.service';
 import { MessageService } from './message.service';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { TechnologySearchComponent } from './technology-search/technology-search.component';
+import { ImageService } from './image.service';
+import { SidenavService } from './sidenav.service';
 
 
 @NgModule({
@@ -38,7 +42,8 @@ import { TechnologySearchComponent } from './technology-search/technology-search
     TechnologyDetailComponent,
     MessagesComponent,
     DashboardComponent,
-    TechnologySearchComponent
+    TechnologySearchComponent,
+    ImagesComponent
   ],
   imports: [
     BrowserAnimationsModule,
@@ -46,10 +51,12 @@ import { TechnologySearchComponent } from './technology-search/technology-search
     HttpClientModule,
     AppRoutingModule,
     MaterialModule,
+    FlexLayoutModule,
     HttpClientInMemoryWebApiModule.forRoot(
                                    InMemoryDataService, { dataEncapsulation: false})
   ],
-  providers: [QuizService, TechnologyService, MessageService],
+  providers: [QuizService, TechnologyService, MessageService,
+              ImageService, SidenavService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

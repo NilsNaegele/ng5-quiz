@@ -6,6 +6,10 @@
   width: 100%  !important;
 }
 
+.mat-toolbar {
+  z-index: 10;
+}
+
 .example-icon {
   padding: 0 14px;
 }

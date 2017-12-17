@@ -1,4 +1,16 @@
-<app-nav-bar></app-nav-bar>
-<router-outlet></router-outlet>
-<app-footer></app-footer>
-
+<section class="app flex-container" fxLayout="column" fxLayoutAlign="start stretch">
+    <app-nav-bar [sidenav]="sidenav" class="mat-elevation-z10"></app-nav-bar>
+    <mat-sidenav-container class="lightred" fxFlex>
+      <mat-sidenav #sidenav mode="side" align="end" class="mat-elevation-z6">
+          <mat-tab-group>
+              <mat-tab label="Technologies">
+                <app-side-nav></app-side-nav>
+              </mat-tab>
+              <mat-tab label="Quizzes">Quizzes</mat-tab>
+              <mat-tab label="Images">Images</mat-tab>
+            </mat-tab-group>
+      </mat-sidenav>
+      <router-outlet></router-outlet>
+    </mat-sidenav-container>
+    <app-footer></app-footer>
+</section>

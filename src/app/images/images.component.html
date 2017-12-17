@@ -1,0 +1,13 @@
+<mat-grid-list class="grid" cols="4" rowHeight="250px">
+    <mat-grid-tile *ngFor="let image of images">
+      <img src="../../assets/{{image.name}}.jpg"
+      alt="image of {{ image.name }}">
+      <mat-grid-tile-footer>
+        <h3 mat-line>{{ image.name }}</h3>
+        <span mat-line>{{ image.description }}</span>
+        <button mat-icon-button (click)="showDetails(image)">
+          <mat-icon>info</mat-icon>
+        </button>
+      </mat-grid-tile-footer>
+    </mat-grid-tile>
+  </mat-grid-list>
