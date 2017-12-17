@@ -1,6 +1,18 @@
 <mat-card class="card main-route-details">
     <mat-card-content>
         <h1>{{ title }}</h1>
+        <mat-form-field class="example-form-field">
+            <input matInput type="text" placeholder="Technology name" #technologyName/>
+            <button mat-button *ngIf="technologyName"
+            matSuffix mat-icon-button aria-label="Clear" (click)="technologyName.value=''">
+            <mat-icon>close</mat-icon>
+            </button>
+        </mat-form-field>
+        <button mat-fab color="primary"
+                (click)="add(technologyName.value);
+                technologyName.value='';">
+            <mat-icon>add</mat-icon>
+        </button>
           <h2>My Technologies</h2>
           <mat-list role="list" class="technologies">
               <mat-list-item *ngFor="let technology of technologies"
@@ -8,6 +20,8 @@
                <a routerLink="/detail/{{ technology.id }}">
                     <span class="badge">{{ technology.id }}</span>{{ technology.name }}
                </a>
+               <button class="delete" (click)="delete(technology)"
+               mat-mini-fab color="warn">x</button>
               </mat-list-item>
           </mat-list>
     </mat-card-content>

@@ -29,19 +29,30 @@ export class TechnologyDetailComponent implements OnInit {
               private location: Location,
               private technologyService: TechnologyService,
               private messageService: MessageService,
-              private snackBar: MatSnackBar) {
-                this.openSnackBar();
-              }
+              private snackBar: MatSnackBar) { }
 
   getTechnology(): void {
     const id = +this.route.snapshot.paramMap.get('id');
     this.technologyService.getTechnology(id)
-                          .subscribe(technology => this.technology = technology);
+                          .subscribe(technology => {
+                            this.technology = technology;
+                            if (!this.technology.url) {
+                              this.technology.url = 'https://homepages.thm.de/~dilg93/java/background.jpg';
+                            }
+                            this.openSnackBar(`fetched technology w/ id=${id}`);
+                          });
   }
 
-  openSnackBar() {
-    const messages = this.messageService.messages;
-    this.snackBar.open(messages.slice(-1).pop(), 'Messages', {
+  save(): void {
+    this.technologyService.updateTechonology(this.technology)
+                          .subscribe(() => {
+                            this.goBack();
+                            this.openSnackBar(`updated technology id=${this.technology.id}`);
+                          });
+  }
+
+  openSnackBar(message: string) {
+    this.snackBar.open(`TechnologyService: ${message}`, 'Messages', {
       duration: 2000,
     });
   }

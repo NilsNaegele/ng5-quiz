@@ -30,15 +30,31 @@ export class TechnologiesComponent implements OnInit {
                           .subscribe(technologies => this.technologies = technologies);
   }
 
+  add(name: string): void {
+    name = name.trim();
+    if (!name) { return; }
+    this.technologyService.addTechnology({ name } as Technology)
+                          .subscribe(technology => {
+                            this.technologies.push(technology);
+                            this.openSnackBar(`added technology w/ id=${technology.id}`);
+                            });
+  }
+
+  delete(technology: Technology): void {
+    this.technologies = this.technologies.filter(t => t !== technology);
+    this.technologyService.deleteTechnology(technology).subscribe(() => {
+      this.openSnackBar(`deleted technology w/ id=${technology.id}`);
+    });
+  }
+
   constructor(private technologyService: TechnologyService,
               private messageService: MessageService,
               private snackBar: MatSnackBar) {
-                this.openSnackBar();
+                this.openSnackBar('fetched technologies');
                }
 
-  openSnackBar() {
-    const messages = this.messageService.messages;
-    this.snackBar.open(messages.slice(-1).pop(), 'Messages', {
+  openSnackBar(message: string) {
+    this.snackBar.open(`TechnologyService: ${message}`, 'Messages', {
       duration: 2000,
     });
   }

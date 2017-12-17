@@ -1,9 +1,14 @@
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { MaterialModule } from './material.module';
+import { HttpClientModule } from '@angular/common/http';
 
+import { MaterialModule } from './material.module';
 import { AppRoutingModule } from './app-routing.module';
+
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService } from './in-memory-data.service';
+
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { QuizComponent } from './quiz/quiz.component';
@@ -36,8 +41,11 @@ import { DashboardComponent } from './dashboard/dashboard.component';
   imports: [
     BrowserAnimationsModule,
     FormsModule,
+    HttpClientModule,
     AppRoutingModule,
-    MaterialModule
+    MaterialModule,
+    HttpClientInMemoryWebApiModule.forRoot(
+                                   InMemoryDataService, { dataEncapsulation: false})
   ],
   providers: [QuizService, TechnologyService, MessageService],
   bootstrap: [AppComponent]
