@@ -3,7 +3,7 @@
     <mat-sidenav-container class="lightred" fxFlex>
       <mat-sidenav #sidenav mode="side" align="end" class="mat-elevation-z6">
           <mat-tab-group>
-              <mat-tab label="Images">
+              <mat-tab *ngIf="image" label="Images">
                   <section class="flex-container" fxLayout="column" fxLayoutAlign="start stretch">
                     <mat-card>
                           <mat-card-title>Wanna party?</mat-card-title>
