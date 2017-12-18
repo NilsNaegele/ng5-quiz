@@ -28,6 +28,7 @@ import { TechnologyService } from './technology.service';
 import { MessageService } from './message.service';
 import { ImageService } from './image.service';
 import { SidenavService } from './sidenav.service';
+import { AddMessageComponent } from './add-message/add-message.component';
 
 
 @NgModule({
@@ -43,7 +44,12 @@ import { SidenavService } from './sidenav.service';
     MessagesComponent,
     DashboardComponent,
     TechnologySearchComponent,
-    ImagesComponent
+    ImagesComponent,
+    AddMessageComponent
+  ],
+  entryComponents: [
+    AppComponent,
+    AddMessageComponent
   ],
   imports: [
     BrowserAnimationsModule,
