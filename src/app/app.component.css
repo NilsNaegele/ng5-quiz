@@ -6,3 +6,14 @@ mat-sidenav {
 mat-tab-group {
   margin-top: 70px;
 }
+
+mat-card {
+  margin: 12px;
+}
+
+.tab-actions{
+  display: inline-block;
+  position: fixed;
+  top: 150px;
+  right: 20px;
+}

@@ -2,6 +2,7 @@ import { Component, ViewChild, OnDestroy } from '@angular/core';
 import { MatSidenav } from '@angular/material';
 import { SidenavService } from './sidenav.service';
 
+import { Image } from './image';
 import { Subscription } from 'rxjs/Subscription';
 
 @Component({
@@ -12,13 +13,19 @@ import { Subscription } from 'rxjs/Subscription';
 export class AppComponent implements OnDestroy {
   @ViewChild('sidenav') sidenav: MatSidenav;
   sideNavSubscription: Subscription;
+  image: Image;
 
   constructor(private sidenavService: SidenavService) {
-    this.sideNavSubscription = sidenavService.open$.subscribe(toOpen => {
-      if (toOpen) {
+    this.sideNavSubscription = sidenavService.open$.subscribe(image => {
+      if (image) {
+        this.image = image;
         this.sidenav.open();
       }
     });
+  }
+
+  close() {
+    this.sidenav.close();
   }
 
   ngOnDestroy() {

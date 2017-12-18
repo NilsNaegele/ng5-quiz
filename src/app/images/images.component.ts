@@ -18,7 +18,7 @@ export class ImagesComponent implements OnInit {
 
   showDetails(image: Image) {
     this.selectedImage = image;
-    this.sidenavService.publishOpen(true);
+    this.sidenavService.publishOpen(this.selectedImage);
   }
 
   ngOnInit() {

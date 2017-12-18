@@ -3,11 +3,94 @@
     <mat-sidenav-container class="lightred" fxFlex>
       <mat-sidenav #sidenav mode="side" align="end" class="mat-elevation-z6">
           <mat-tab-group>
+              <mat-tab label="Images">
+                  <section class="flex-container" fxLayout="column" fxLayoutAlign="start stretch">
+                    <mat-card>
+                          <mat-card-title>Wanna party?</mat-card-title>
+                          <mat-card-content>Let's code with passion ...</mat-card-content>
+                    </mat-card>
+                    <mat-card>
+                    <mat-card-title>Name</mat-card-title>
+                    <mat-card-content>{{ image?.name | uppercase }}</mat-card-content>
+                  </mat-card>
+                  <mat-card>
+                      <mat-card-title>Description</mat-card-title>
+                      <mat-card-content>{{ image?.description }}</mat-card-content>
+                  </mat-card>
+                  <mat-card>
+                      <mat-card-title>Image</mat-card-title>
+                      <img mat-card-image
+                           src="../assets/{{ image?.name }}.jpg"
+                           alt="Photo of {{ image?.name }}">
+                  </mat-card>
+                </section>
+                <section class="tab-actions">
+                    <button mat-fab color="primary" (click)="close()">
+                      <mat-icon>close</mat-icon>
+                    </button>
+                </section>
+                </mat-tab>
               <mat-tab label="Technologies">
                 <app-side-nav></app-side-nav>
+                <section class="tab-actions">
+                    <button mat-fab color="primary" (click)="close()">
+                      <mat-icon>close</mat-icon>
+                    </button>
+                </section>
               </mat-tab>
-              <mat-tab label="Quizzes">Quizzes</mat-tab>
-              <mat-tab label="Images">Images</mat-tab>
+              <mat-tab label="Quizzes">
+                <section class="flex-container" fxLayout="column" fxLayoutAlign="start stretch">
+                  <mat-card>
+                      <mat-card-title>Show me the code.</mat-card-title>
+                      <mat-card-content>We are pure Linux Open Source here.</mat-card-content>
+                </mat-card>
+                <mat-card>
+                    <mat-card-title>Quizzes</mat-card-title>
+                    <mat-card-content>
+                  <mat-list>
+                      <h3 mat-subheader>JavaScript</h3>
+                      <mat-list-item>
+                        <mat-icon mat-list-icon>android</mat-icon>
+                        <h4 mat-line>JavaScript Quiz 1</h4>
+                        <p mat-line> 18.12.2017 </p>
+                      </mat-list-item>
+                      <mat-list-item>
+                          <mat-icon mat-list-icon>android</mat-icon>
+                          <h4 mat-line>JavaScript Quiz 2</h4>
+                          <p mat-line> 20.12.2017 </p>
+                        </mat-list-item>
+                        <mat-list-item>
+                            <mat-icon mat-list-icon>android</mat-icon>
+                            <h4 mat-line>JavaScript Quiz 3</h4>
+                            <p mat-line> 22.12.2017 </p>
+                          </mat-list-item>
+                      <mat-divider></mat-divider>
+                      <h3 mat-subheader>Angular</h3>
+                      <mat-list-item>
+                        <mat-icon mat-list-icon>security</mat-icon>
+                        <h4 mat-line>Angular Quiz 1</h4>
+                        <p mat-line> 24.12.2017 </p>
+                      </mat-list-item>
+                      <mat-list-item>
+                          <mat-icon mat-list-icon>security</mat-icon>
+                          <h4 mat-line>Angular Quiz 2</h4>
+                          <p mat-line> 26.12.2017 </p>
+                        </mat-list-item>
+                        <mat-list-item>
+                            <mat-icon mat-list-icon>security</mat-icon>
+                            <h4 mat-line>Angular Quiz 3</h4>
+                            <p mat-line> 28.12.2017 </p>
+                          </mat-list-item>
+                    </mat-list>
+                  </mat-card-content>
+                  </mat-card>
+                  <section class="tab-actions">
+                      <button mat-fab color="primary" (click)="close()">
+                        <mat-icon>close</mat-icon>
+                      </button>
+                  </section>
+                </section>
+              </mat-tab>
             </mat-tab-group>
       </mat-sidenav>
       <router-outlet></router-outlet>
