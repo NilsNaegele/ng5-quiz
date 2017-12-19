@@ -93,12 +93,18 @@ export class AlphaComponent implements OnInit {
       if (this.configuration.autoMove) {
         this.move(this.pager.index + 1);
       }
+      console.log(this.pager.index);
   }
 
   move(index: number) {
     if (index >= 0 && index < this.pager.count) {
         this.pager.index = index;
         this.mode = 'quiz';
+    } else {
+      return;
+    }
+    if ((index === 9 || index === 0) && this.pager.count === 10) {
+      return;
     }
     this.state = (this.state === 'in' ? 'out' : 'in');
   }
@@ -114,7 +120,6 @@ export class AlphaComponent implements OnInit {
    onSubmit() {
      const answers = [];
      this.quiz.questions.forEach(a => answers.push({ 'quizId': this.quiz.id, 'questionId': a.id, 'answered': a.answered}));
-      console.log(this.quiz.questions);
       this.mode = 'result';
     }
 

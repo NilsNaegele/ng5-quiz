@@ -25,7 +25,11 @@
             <section class="example-section">
               <mat-checkbox class="checkbox-margin" id="{{ option.id }}"
               [(ngModel)]="option.selected" (change)="onSelect(question, option)">
-              <span class="checkbox-text-wrap">{{ option.name }}</span>
+              <span class="checkbox-text-wrap">
+                <code>
+                {{ option.name }}
+              </code>
+              </span>
             </mat-checkbox>
             </section>
           </div>
