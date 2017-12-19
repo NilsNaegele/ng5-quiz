@@ -1,0 +1,107 @@
+<mat-card class="card" [@flyInOut]="state">
+  <section class="example-section">
+    <h1>{{ quiz.name }}</h1>
+    <mat-form-field class="select-margin">
+      <mat-select class="right" [(ngModel)]="quizName" (change)="loadQuiz(quizName)">
+        <mat-option *ngFor="let quiz of quizzes" [value]="quiz.id">
+          {{ quiz.name }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </section>
+  <hr>
+  <mat-card-content>
+    <div *ngIf="mode === 'quiz' && quiz">
+      <div *ngFor="let question of filteredQuestions">
+        <mat-chip-list>
+          <mat-chip color="accent" selected="true">
+            Question {{ pager.index + 1 }} of {{ pager.count }}.</mat-chip>
+        </mat-chip-list>
+        <h2>{{ pager.index + 1 }}.
+          <span [innerHTML]="question.name"></span>
+        </h2>
+        <div>
+          <div *ngFor="let option of question.options">
+            <section class="example-section">
+              <mat-checkbox class="checkbox-margin" id="{{ option.id }}"
+              [(ngModel)]="option.selected" (change)="onSelect(question, option)">
+              <span class="checkbox-text-wrap">{{ option.name }}</span>
+            </mat-checkbox>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mat-card-content>
+  <hr>
+  <mat-card-actions>
+    <div class="buttons-margin">
+    <button mat-fab color="primary" *ngIf="configuration.allowBack"
+     (click)="move(0)">
+      <i class="material-icons">first_page</i>
+    </button>
+    <button mat-fab color="accent" *ngIf="configuration.allowBack"
+    (click)="move(pager.index - 1)">
+      <i class="material-icons">navigate_before</i>
+    </button>
+    <button mat-fab color="warn"
+    (click)="move(pager.index + 1)">
+      <i class="material-icons">navigate_next</i>
+    </button>
+    <button mat-fab color="primary" *ngIf="configuration.allowBack"
+    (click)="move( pager.count - 1)">
+      <i class="material-icons">last_page</i>
+    </button>
+  </div>
+  </mat-card-actions>
+</mat-card>
+
+<mat-card *ngIf="mode === 'review'" class="card-bottom">
+    <mat-grid-list cols="4" rowHeight="4:1">
+        <mat-grid-tile *ngFor="let question of quiz.questions; let idx = index;">
+            <mat-chip-list>
+                <mat-chip
+                           selected="true"
+                           (click)="move(index)"
+                           color="{{ isAnswered(question) === 'Answered' ? 'primary' : 'warn' }}">
+                           {{ idx + 1 }}. {{ isAnswered(question) }}
+                </mat-chip>
+              </mat-chip-list>
+        </mat-grid-tile>
+      </mat-grid-list>
+</mat-card>
+
+   <mat-card *ngIf="mode === 'result'" class="card-result">
+   <h2>Quiz Results</h2>
+    <mat-card-content>
+        <div *ngFor="let question of quiz.questions; let idx = index;">
+          <h4>{{ idx + 1 }}. {{ question.name }}
+          </h4>
+          <div>
+            <div *ngFor="let option of question.options">
+              <section class="example-section">
+                <mat-checkbox class="example-margin" id="{{ option.id }}" disabled="disabled"
+                [(ngModel)]="option.selected" >
+                <span class="checkbox-text-wrap">{{ option.name }}</span>
+              </mat-checkbox>
+              </section>
+            </div>
+            <div class="alert">
+                <mat-chip-list>
+                    <mat-chip
+                    color="{{ isCorrect(question) === 'correct' ? 'primary' : 'accent' }}"
+                    selected="true">Your answer is {{ isCorrect(question) }}.</mat-chip>
+                  </mat-chip-list>
+            </div>
+          </div>
+        </div>
+    </mat-card-content>
+    <hr>
+    <button mat-raised-button (click)="restart()" color="warn">Restart</button>
+  </mat-card>
+  <mat-card class="card-bottom" *ngIf="mode !== 'result'" [@flyInOut]="state">
+      <button mat-raised-button (click)="mode = 'quiz'" color="primary">Quiz</button>
+      <button mat-raised-button (click)="mode = 'review'" color="accent">Review</button>
+      <button mat-raised-button (click)="onSubmit()" color="warn">Submit Quiz</button>
+  </mat-card>
+

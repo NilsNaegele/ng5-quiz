@@ -1,0 +1,367 @@
+{
+  "id": 1,
+  "name": "JAVASCRIPT 3 Alpha Quiz",
+  "description": "The world runs on JavaScript, Java and Linux. OpenSource Heroes.",
+  "questions": [
+    {
+          "id": 1010,
+          "name": "Class",
+          "questionTypeId": 1,
+          "options": [
+              {
+                  "id": 1055,
+                  "questionId": 1010,
+                  "name": "Object",
+                  "isAnswer": false
+              },
+              {
+                  "id": 1057,
+                  "questionId": 1010,
+                  "name": "Number",
+                  "isAnswer": false
+              },
+              {
+                  "id": 1056,
+                  "questionId": 1010,
+                  "name": "class Rectangle { constructor(height, width) { this.height = height; this.width = width; }}",
+                  "isAnswer": true
+              },
+              {
+                  "id": 1058,
+                  "questionId": 1010,
+                  "name": "Boolean",
+                  "isAnswer": false
+              }
+          ],
+          "questionType": {
+              "id": 1,
+              "name": "Multiple Choice",
+              "isActive": true
+          }
+      },
+      {
+          "id": 1011,
+          "name": "Arrow Function",
+          "questionTypeId": 1,
+          "options": [
+              {
+                  "id": 1055,
+                  "questionId": 1010,
+                  "name": "var odds = evens.map(v => v + 1);",
+                  "isAnswer": true
+              },
+              {
+                  "id": 1056,
+                  "questionId": 1010,
+                  "name": "for (let i = 0; i < 9; i++) { console.log(i); }",
+                  "isAnswer": false
+              },
+              {
+                  "id": 1057,
+                  "questionId": 1010,
+                  "name": "const a = 'myAlphabet';",
+                  "isAnswer": false
+              },
+              {
+                  "id": 1058,
+                  "questionId": 1010,
+                  "name": "let b = 100;",
+                  "isAnswer": false
+              }
+          ],
+          "questionType": {
+              "id": 1,
+              "name": "Multiple Choice",
+              "isActive": true
+          }
+      },
+      {
+          "id": 1012,
+          "name": "Enhanced Object Literal",
+          "questionTypeId": 1,
+          "options": [
+              {
+                  "id": 1055,
+                  "questionId": 1010,
+                  "name": "var obj = { __proto__: theProtoObj, handler, toString() { return 'd ' + super.toString(); },[ 'prop_' + (() => 42)() ]: 42 };",
+                  "isAnswer": true
+              },
+              {
+                  "id": 1057,
+                  "questionId": 1010,
+                  "name": "Object",
+                  "isAnswer": false
+              },
+              {
+                  "id": 1056,
+                  "questionId": 1010,
+                  "name": "String",
+                  "isAnswer": false
+              },
+              {
+                  "id": 1058,
+                  "questionId": 1010,
+                  "name": "Number",
+                  "isAnswer": false
+              }
+          ],
+          "questionType": {
+              "id": 1,
+              "name": "Multiple Choice",
+              "isActive": true
+          }
+      },
+      {
+          "id": 1013,
+          "name": "Template String",
+          "questionTypeId": 1,
+          "options": [
+              {
+                  "id": 1055,
+                  "questionId": 1010,
+                  "name": "'In JavaScript '\n' is a line-feed.'",
+                  "isAnswer": false
+              },
+              {
+                  "id": 1057,
+                  "questionId": 1010,
+                  "name": "In JavaScript this is not legal.",
+                  "isAnswer": false
+              },
+              {
+                  "id": 1056,
+                  "questionId": 1010,
+                  "name": "var name = 'Bob', time = 'today';",
+                  "isAnswer": false
+              },
+              {
+                  "id": 1058,
+                  "questionId": 1010,
+                  "name": "`Hello ${name}, how are you ${time}?`",
+                  "isAnswer": true
+              }
+          ],
+          "questionType": {
+              "id": 1,
+              "name": "Multiple Choice",
+              "isActive": true
+          }
+      },
+      {
+          "id": 1014,
+          "name": "Destructuring",
+          "questionTypeId": 1,
+          "options": [
+              {
+                  "id": 1055,
+                  "questionId": 1010,
+                  "name": "var [a, , b] = [1,2,3];",
+                  "isAnswer": true
+              },
+              {
+                  "id": 1057,
+                  "questionId": 1010,
+                  "name": "do { i += 1; result += i + ' '; } while (i < 5);",
+                  "isAnswer": false
+              },
+              {
+                  "id": 1056,
+                  "questionId": 1010,
+                  "name": "for (const prop in obj) { console.log(`obj.${prop} = ${obj[prop]}`);}",
+                  "isAnswer": false
+              },
+              {
+                  "id": 1058,
+                  "questionId": 1010,
+                  "name": "for (let value of iterable) { value += 1; console.log(value); }",
+                  "isAnswer": false
+              }
+          ],
+          "questionType": {
+              "id": 1,
+              "name": "Multiple Choice",
+              "isActive": true
+          }
+      },
+      {
+          "id": 1015,
+          "name": "Default + Rest + Spread",
+          "questionTypeId": 1,
+          "options": [
+              {
+                  "id": 1055,
+                  "questionId": 1010,
+                  "name": "function hoisted() { console.log('foo'); }",
+                  "isAnswer": false
+              },
+              {
+                  "id": 1057,
+                  "questionId": 1010,
+                  "name": "function f(x, ...y) { return x * y.length; } f(3, 'hello', true) === 6;",
+                  "isAnswer": true
+              },
+              {
+                  "id": 1056,
+                  "questionId": 1010,
+                  "name": "if (x > 10) { } else if (x > 100) { } else { }",
+                  "isAnswer": false
+              },
+              {
+                  "id": 1058,
+                  "questionId": 1010,
+                  "name": "All are wrong",
+                  "isAnswer": false
+              }
+          ],
+          "questionType": {
+              "id": 1,
+              "name": "Multiple Choice",
+              "isActive": true
+          }
+      },
+      {
+          "id": 1016,
+          "name": "Var + Let + Const",
+          "questionTypeId": 1,
+          "options": [
+              {
+                  "id": 1055,
+                  "questionId": 1010,
+                  "name": "var myPrincess = 'PolymerPrincess'; let a = true; const x = 'sneaky';",
+                  "isAnswer": true
+              },
+              {
+                  "id": 1056,
+                  "questionId": 1010,
+                  "name": "import * as myModule from '/modules/my-module.js';",
+                  "isAnswer": false
+              },
+              {
+                  "id": 1057,
+                  "questionId": 1010,
+                  "name": "myModule.doAllTheAmazingThings();",
+                  "isAnswer": false
+              },
+              {
+                  "id": 1058,
+                  "questionId": 1010,
+                  "name": "All are true",
+                  "isAnswer": false
+              }
+          ],
+          "questionType": {
+              "id": 1,
+              "name": "Multiple Choice",
+              "isActive": true
+          }
+      },
+      {
+          "id": 1017,
+          "name": "Iterator",
+          "questionTypeId": 1,
+          "options": [
+              {
+                  "id": 1055,
+                  "questionId": 1010,
+                  "name": "let fibonacci = { [Symbol.iterator]() { let pre = 0, cur = 1; return { next() { [pre, cur] = [cur, pre + cur]; return { done: false, value: cur } } } } }",
+                  "isAnswer": true
+              },
+              {
+                  "id": 1056,
+                  "questionId": 1010,
+                  "name": "throw true;",
+                  "isAnswer": false
+              },
+              {
+                  "id": 1057,
+                  "questionId": 1010,
+                  "name": "() => doSomething();",
+                  "isAnswer": false
+              },
+              {
+                  "id": 1058,
+                  "questionId": 1010,
+                  "name": "function(a, b) { return a + b; }",
+                  "isAnswer": false
+              }
+          ],
+          "questionType": {
+              "id": 1,
+              "name": "Multiple Choice",
+              "isActive": true
+          }
+      },
+      {
+          "id": 1018,
+          "name": "Modules",
+          "questionTypeId": 1,
+          "options": [
+              {
+                  "id": 1055,
+                  "questionId": 1010,
+                  "name": "export function sum(x, y) { return x + y; } import * as math from 'lib/math';",
+                  "isAnswer": true
+              },
+              {
+                  "id": 1057,
+                  "questionId": 1010,
+                  "name": "try { throw 'myException'; } catch (e) { logMyErrors(e); }",
+                  "isAnswer": false
+              },
+              {
+                  "id": 1056,
+                  "questionId": 1010,
+                  "name": "var n = 0; var x = 0; while (n < 3) { n++; x += n; }",
+                  "isAnswer": false
+              },
+              {
+                  "id": 1058,
+                  "questionId": 1010,
+                  "name": "let iterable = [10, 20, 30]; for (let value of iterable) { value += 1; console.log(value); }",
+                  "isAnswer": false
+              }
+          ],
+          "questionType": {
+              "id": 1,
+              "name": "Multiple Choice",
+              "isActive": true
+          }
+      },
+      {
+          "id": 1019,
+          "name": "Set",
+          "questionTypeId": 1,
+          "options": [
+              {
+                  "id": 1055,
+                  "questionId": 1010,
+                  "name": "var s = new Set(); s.add('love').add('you').add('love');",
+                  "isAnswer": true
+              },
+              {
+                  "id": 1056,
+                  "questionId": 1010,
+                  "name": "let obj = { a: 1 }; const copy = Object.assign({}, obj); console.log(copy);",
+                  "isAnswer": false
+              },
+              {
+                  "id": 1057,
+                  "questionId": 1010,
+                  "name": "const myFirstPromise = new Promise((resolve, reject) => { });",
+                  "isAnswer": false
+              },
+              {
+                  "id": 1058,
+                  "questionId": 1010,
+                  "name": "new RegExp('ab+c', 'i');",
+                  "isAnswer": false
+              }
+          ],
+          "questionType": {
+              "id": 1,
+              "name": "Multiple Choice",
+              "isActive": true
+          }
+      }
+  ]
+}

@@ -1,0 +1,367 @@
+{
+  "id": 1,
+  "name": "JAVASCRIPT 2 Alpha Quiz",
+  "description": "The world runs on JavaScript, Java and Linux. OpenSource Heroes.",
+  "questions": [
+      {
+          "id": 1010,
+          "name": "ARROW Function",
+          "questionTypeId": 1,
+          "options": [
+              {
+                  "id": 1055,
+                  "questionId": 1010,
+                  "name": "function(){ return (() => 42)() === 42; }",
+                  "isAnswer": true
+              },
+              {
+                  "id": 1056,
+                  "questionId": 1010,
+                  "name": "var arr = ['a', 'b', 'c']; console.log(Object.keys(arr));",
+                  "isAnswer": false
+              },
+              {
+                  "id": 1057,
+                  "questionId": 1010,
+                  "name": "var obj = { foo: 'bar', baz: 42 }; console.log(Object.values(obj));",
+                  "isAnswer": false
+              },
+              {
+                  "id": 1058,
+                  "questionId": 1010,
+                  "name": "const OS = ['Linux', 'MacOS/X']; console.log(OS.length);",
+                  "isAnswer": false
+              }
+          ],
+          "questionType": {
+              "id": 1,
+              "name": "Multiple Choice",
+              "isActive": true
+          }
+      },
+      {
+          "id": 1011,
+          "name": "Class",
+          "questionTypeId": 1,
+          "options": [
+              {
+                  "id": 1055,
+                  "questionId": 1010,
+                  "name": "console.log(Array.from([1, 2, 3], x => x + x));",
+                  "isAnswer": false
+              },
+              {
+                  "id": 1057,
+                  "questionId": 1010,
+                  "name": "Array.isArray([1, 2, 3]);",
+                  "isAnswer": false
+              },
+              {
+                  "id": 1056,
+                  "questionId": 1010,
+                  "name": "function(){ class C {} return typeof C === 'function'; }",
+                  "isAnswer": true
+              },
+              {
+                  "id": 1058,
+                  "questionId": 1010,
+                  "name": "Array.of(42);",
+                  "isAnswer": false
+              }
+          ],
+          "questionType": {
+              "id": 1,
+              "name": "Multiple Choice",
+              "isActive": true
+          }
+      },
+      {
+          "id": 1012,
+          "name": "Super",
+          "questionTypeId": 1,
+          "options": [
+              {
+                  "id": 1055,
+                  "questionId": 1010,
+                  "name": "function(){ var passed = false; class B { constructor(a) { passed = (a === 'barbaz'); } } class C extends B { constructor(a) { super('bar' + a); } } new C('baz'); return passed; }",
+                  "isAnswer": true
+              },
+              {
+                  "id": 1057,
+                  "questionId": 1010,
+                  "name": "var arr1 = ['a', 'b', 'c']; var arr2 = ['x', 'y', 'z']; var arr3 = arr1.concat(arr2);",
+                  "isAnswer": false
+              },
+              {
+                  "id": 1056,
+                  "questionId": 1010,
+                  "name": "['alpha', 'bravo', 'charlie', 'delta'].copyWithin(2, 0);",
+                  "isAnswer": false
+              },
+              {
+                  "id": 1058,
+                  "questionId": 1010,
+                  "name": "var a = ['a', 'b', 'c']; var iterator = a.entries(); console.log(iterator.next().value);",
+                  "isAnswer": false
+              }
+          ],
+          "questionType": {
+              "id": 1,
+              "name": "Multiple Choice",
+              "isActive": true
+          }
+      },
+      {
+          "id": 1013,
+          "name": "Generators",
+          "questionTypeId": 1,
+          "options": [
+              {
+                  "id": 1055,
+                  "questionId": 1010,
+                  "name": "function isBelowThreshold(currentValue) {return currentValue < 40; } var array1 = [2, 4, 8, 16, 32, 64]; console.log(array1.every(isBelowThreshold));",
+                  "isAnswer": false
+              },
+              {
+                  "id": 1057,
+                  "questionId": 1010,
+                  "name": "var numbers = [1, 2, 3, 4]; numbers.fill(1);",
+                  "isAnswer": false
+              },
+              {
+                  "id": 1056,
+                  "questionId": 1010,
+                  "name": "const words = ['love', 'polymer', 'princess']; const result = words.filter(word => word.length > 4); console.log(result);",
+                  "isAnswer": false
+              },
+              {
+                  "id": 1058,
+                  "questionId": 1010,
+                  "name": "function(){ function * generator(){ yield 5; yield 6; }; var iterator = generator(); var item = iterator.next(); var passed = item.value === 5 && item.done === false;item = iterator.next(); passed &= item.value === 6 && item.done === false; item = iterator.next(); passed    &= item.value === undefined && item.done === true; return passed; }",
+                  "isAnswer": true
+              }
+          ],
+          "questionType": {
+              "id": 1,
+              "name": "Multiple Choice",
+              "isActive": true
+          }
+      },
+      {
+          "id": 1014,
+          "name": "Typed arrays",
+          "questionTypeId": 1,
+          "options": [
+              {
+                  "id": 1055,
+                  "questionId": 1010,
+                  "name": "function(){ var buffer = new ArrayBuffer(64); var view = new Int8Array(buffer); view[0] = 0x80; return view[0] === -0x80; }",
+                  "isAnswer": true
+              },
+              {
+                  "id": 1057,
+                  "questionId": 1010,
+                  "name": "function isBigEnough(element) { return element >= 15; } [2, 4, 8, 16, 1024].find(isBigEnough);",
+                  "isAnswer": false
+              },
+              {
+                  "id": 1056,
+                  "questionId": 1010,
+                  "name": "var array1 = [512, 1024, 2048, 4096, 8192]; function findFirstLargeNumber(element) { return element > 1000; } console.log(array1.findIndex(findFirstLargeNumber));",
+                  "isAnswer": false
+              },
+              {
+                  "id": 1058,
+                  "questionId": 1010,
+                  "name": "const arr = ['a', 'b', 'c', 'd', 'e']; arr.forEach(function(element) { console.log(element); }); ",
+                  "isAnswer": false
+              }
+          ],
+          "questionType": {
+              "id": 1,
+              "name": "Multiple Choice",
+              "isActive": true
+          }
+      },
+      {
+          "id": 1015,
+          "name": "Default + Rest + Spread",
+          "questionTypeId": 1,
+          "options": [
+              {
+                  "id": 1055,
+                  "questionId": 1010,
+                  "name": "function hoisted() { console.log('foo'); }",
+                  "isAnswer": false
+              },
+              {
+                  "id": 1057,
+                  "questionId": 1010,
+                  "name": "function f(x, ...y) { return x * y.length; } f(3, 'hello', true) === 6;",
+                  "isAnswer": true
+              },
+              {
+                  "id": 1056,
+                  "questionId": 1010,
+                  "name": "var array1 = [1, 2, 3]; console.log(array1.includes(3));",
+                  "isAnswer": false
+              },
+              {
+                  "id": 1058,
+                  "questionId": 1010,
+                  "name": "var pets = ['cat', 'dog', 'bat']; console.log(pets.includes('cat'));",
+                  "isAnswer": false
+              }
+          ],
+          "questionType": {
+              "id": 1,
+              "name": "Multiple Choice",
+              "isActive": true
+          }
+      },
+      {
+          "id": 1016,
+          "name": "Map",
+          "questionTypeId": 1,
+          "options": [
+              {
+                  "id": 1055,
+                  "questionId": 1010,
+                  "name": "function(){ var key = {}; var map = new Map(); map.set(key, 123); return map.has(key) && map.get(key) === 123; }",
+                  "isAnswer": true
+              },
+              {
+                  "id": 1056,
+                  "questionId": 1010,
+                  "name": "var a = [2, 9, 9]; a.indexOf(2);",
+                  "isAnswer": false
+              },
+              {
+                  "id": 1057,
+                  "questionId": 1010,
+                  "name": "var elements = ['Fire', 'Wind', 'Rain']; console.log(elements.join());",
+                  "isAnswer": false
+              },
+              {
+                  "id": 1058,
+                  "questionId": 1010,
+                  "name": "var arr = ['a', 'b', 'c']; var iterator = arr.keys(); console.log(iterator.next());",
+                  "isAnswer": false
+              }
+          ],
+          "questionType": {
+              "id": 1,
+              "name": "Multiple Choice",
+              "isActive": true
+          }
+      },
+      {
+          "id": 1017,
+          "name": "Set",
+          "questionTypeId": 1,
+          "options": [
+              {
+                  "id": 1055,
+                  "questionId": 1010,
+                  "name": "function(){ var obj = {}; var set = new Set(); set.add(123); set.add(123); return set.has(123); }",
+                  "isAnswer": true
+              },
+              {
+                  "id": 1056,
+                  "questionId": 1010,
+                  "name": "var array1 = [1, 4, 9, 16]; const map1 = array1.map(x => x * 2);",
+                  "isAnswer": false
+              },
+              {
+                  "id": 1057,
+                  "questionId": 1010,
+                  "name": "var plants = ['broccoli', 'cauliflower', 'cabbage', 'kale', 'tomato']; console.log(plants.pop());",
+                  "isAnswer": false
+              },
+              {
+                  "id": 1058,
+                  "questionId": 1010,
+                  "name": "var numbers = [1, 2, 3]; console.log(numbers); ",
+                  "isAnswer": false
+              }
+          ],
+          "questionType": {
+              "id": 1,
+              "name": "Multiple Choice",
+              "isActive": true
+          }
+      },
+      {
+          "id": 1018,
+          "name": "Promise",
+          "questionTypeId": 1,
+          "options": [
+              {
+                  "id": 1055,
+                  "questionId": 1010,
+                  "name": "function(){ new Promise(function(){}); try { Promise(function(){}); return false; } catch(e) { return true; }}",
+                  "isAnswer": true
+              },
+              {
+                  "id": 1057,
+                  "questionId": 1010,
+                  "name": "const array1 = [1, 2, 3, 4]; console.log(array1.reduce((accumulator, currentValue) => accumulator + currentValue;));",
+                  "isAnswer": false
+              },
+              {
+                  "id": 1056,
+                  "questionId": 1010,
+                  "name": "var a = ['one', 'two', 'three']; a.reverse(); console.log(a);",
+                  "isAnswer": false
+              },
+              {
+                  "id": 1058,
+                  "questionId": 1010,
+                  "name": "var a = [1, 2, 3]; var b = a.shift(); console.log(a);",
+                  "isAnswer": false
+              }
+          ],
+          "questionType": {
+              "id": 1,
+              "name": "Multiple Choice",
+              "isActive": true
+          }
+      },
+      {
+          "id": 1019,
+          "name": "Symbol",
+          "questionTypeId": 1,
+          "options": [
+              {
+                  "id": 1055,
+                  "questionId": 1010,
+                  "name": "function(){ var object = {}; var symbol = Symbol(); var value = {}; object[symbol] = value; return object[symbol] === value; }",
+                  "isAnswer": true
+              },
+              {
+                  "id": 1056,
+                  "questionId": 1010,
+                  "name": "function isBiggerThan10(element, index, array) { return element > 10; } [12, 5, 8, 1, 4].some(isBiggerThan10);",
+                  "isAnswer": false
+              },
+              {
+                  "id": 1057,
+                  "questionId": 1010,
+                  "name": "var fruit = ['cherries', 'apples', 'bananas']; fruit.sort();",
+                  "isAnswer": false
+              },
+              {
+                  "id": 1058,
+                  "questionId": 1010,
+                  "name": "var myFish = ['angel', 'clown', 'mandarin', 'sturgeon']; myFish.splice(1, 1);",
+                  "isAnswer": false
+              }
+          ],
+          "questionType": {
+              "id": 1,
+              "name": "Multiple Choice",
+              "isActive": true
+          }
+      }
+  ]
+}

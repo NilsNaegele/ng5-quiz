@@ -2,6 +2,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { HttpModule } from '@angular/http';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { MaterialModule } from './material.module';
@@ -29,6 +30,8 @@ import { MessageService } from './message.service';
 import { ImageService } from './image.service';
 import { SidenavService } from './sidenav.service';
 import { AddMessageComponent } from './add-message/add-message.component';
+import { AlphaComponent } from './alpha/alpha.component';
+
 
 
 @NgModule({
@@ -45,7 +48,8 @@ import { AddMessageComponent } from './add-message/add-message.component';
     DashboardComponent,
     TechnologySearchComponent,
     ImagesComponent,
-    AddMessageComponent
+    AddMessageComponent,
+    AlphaComponent
   ],
   entryComponents: [
     AppComponent,
@@ -55,6 +59,7 @@ import { AddMessageComponent } from './add-message/add-message.component';
     BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,
+    HttpModule,
     AppRoutingModule,
     MaterialModule,
     FlexLayoutModule,

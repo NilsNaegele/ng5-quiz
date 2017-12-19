@@ -7,6 +7,7 @@ import { TechnologiesComponent } from './technologies/technologies.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { TechnologyDetailComponent } from './technology-detail/technology-detail.component';
 import { ImagesComponent } from './images/images.component';
+import { AlphaComponent } from './alpha/alpha.component';
 
 const routes: Routes = [
   {
@@ -32,6 +33,10 @@ const routes: Routes = [
   {
     path: 'images',
     component: ImagesComponent
+  },
+  {
+    path: 'alpha-project',
+    component: AlphaComponent
   },
   {
     path: '**',

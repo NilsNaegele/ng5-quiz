@@ -1,0 +1,367 @@
+{
+  "id": 1,
+  "name": "JAVASCRIPT 1 Alpha Quiz",
+  "description": "The world runs on JavaScript, Java and Linux. OpenSource Heroes.",
+  "questions": [
+      {
+          "id": 1010,
+          "name": "Default function parameters",
+          "questionTypeId": 1,
+          "options": [
+              {
+                  "id": 1055,
+                  "questionId": 1010,
+                  "name": "function(){ return (function (a = 1, b = 2) { return a === 3 && b === 2; }(3));}",
+                  "isAnswer": true
+              },
+              {
+                  "id": 1056,
+                  "questionId": 1010,
+                  "name": "String.fromCodePoint(42);",
+                  "isAnswer": false
+              },
+              {
+                  "id": 1057,
+                  "questionId": 1010,
+                  "name": "let greetList = ['Hello', ' ', 'Nils-Holger', '!']; ''.concat(...greetList);",
+                  "isAnswer": false
+              },
+              {
+                  "id": 1058,
+                  "questionId": 1010,
+                  "name": "const str = 'To be, or not to be, that is the question.'; console.log(str.includes('To be'));  ",
+                  "isAnswer": false
+              }
+          ],
+          "questionType": {
+              "id": 1,
+              "name": "Multiple Choice",
+              "isActive": true
+          }
+      },
+      {
+          "id": 1011,
+          "name": "Rest parameters",
+          "questionTypeId": 1,
+          "options": [
+              {
+                  "id": 1055,
+                  "questionId": 1010,
+                  "name": "Blue Whale'.indexOf('Blue');  ",
+                  "isAnswer": false
+              },
+              {
+                  "id": 1057,
+                  "questionId": 1010,
+                  "name": "var found = str.match(re);",
+                  "isAnswer": false
+              },
+              {
+                  "id": 1056,
+                  "questionId": 1010,
+                  "name": "function() { return (function (foo, ...args) {return args instanceof Array && args + '' === 'bar,baz';}('foo', 'bar', 'baz')); }",
+                  "isAnswer": true
+              },
+              {
+                  "id": 1058,
+                  "questionId": 1010,
+                  "name": "var newstr = str.replace(/xmas/i, 'Christmas');",
+                  "isAnswer": false
+              }
+          ],
+          "questionType": {
+              "id": 1,
+              "name": "Multiple Choice",
+              "isActive": true
+          }
+      },
+      {
+          "id": 1012,
+          "name": "Spread (...) operator",
+          "questionTypeId": 1,
+          "options": [
+              {
+                  "id": 1055,
+                  "questionId": 1010,
+                  "name": "function(){ return Math.max(...[1, 2, 3]) === 3; }",
+                  "isAnswer": true
+              },
+              {
+                  "id": 1057,
+                  "questionId": 1010,
+                  "name": "var str = 'hey JudE'; var re = /[A-Z]/g; console.log(str.search(re));",
+                  "isAnswer": false
+              },
+              {
+                  "id": 1056,
+                  "questionId": 1010,
+                  "name": "var str1 = 'The morning is upon us.'; str2 = str1.slice(1, 8),",
+                  "isAnswer": false
+              },
+              {
+                  "id": 1058,
+                  "questionId": 1010,
+                  "name": "var myString = 'Hello World. How are you doing?'; var splits = myString.split(' ', 3);",
+                  "isAnswer": false
+              }
+          ],
+          "questionType": {
+              "id": 1,
+              "name": "Multiple Choice",
+              "isActive": true
+          }
+      },
+      {
+          "id": 1013,
+          "name": "Object literal extensions",
+          "questionTypeId": 1,
+          "options": [
+              {
+                  "id": 1055,
+                  "questionId": 1010,
+                  "name": "var str = 'abcdefghij'; console.log('(-3, 2): '  + str.substr(-3, 2));",
+                  "isAnswer": false
+              },
+              {
+                  "id": 1057,
+                  "questionId": 1010,
+                  "name": "var anyString = 'MOZILLA'; console.log(anyString.substring(0, 3));",
+                  "isAnswer": false
+              },
+              {
+                  "id": 1056,
+                  "questionId": 1010,
+                  "name": "'ALPHA'.toLocaleLowerCase();",
+                  "isAnswer": false
+              },
+              {
+                  "id": 1058,
+                  "questionId": 1010,
+                  "name": "function(){ var x = 'y'; return ({ [x]: 1 }).y === 1; }",
+                  "isAnswer": true
+              }
+          ],
+          "questionType": {
+              "id": 1,
+              "name": "Multiple Choice",
+              "isActive": true
+          }
+      },
+      {
+          "id": 1014,
+          "name": "For..of loops",
+          "questionTypeId": 1,
+          "options": [
+              {
+                  "id": 1055,
+                  "questionId": 1010,
+                  "name": "function(){ var arr = [42]; for (let item of arr) { return item === 42; } ",
+                  "isAnswer": true
+              },
+              {
+                  "id": 1057,
+                  "questionId": 1010,
+                  "name": "'alphabet'.toLocaleUpperCase();",
+                  "isAnswer": false
+              },
+              {
+                  "id": 1056,
+                  "questionId": 1010,
+                  "name": "var x = new String('Hello world'); console.log(x.toString());",
+                  "isAnswer": false
+              },
+              {
+                  "id": 1058,
+                  "questionId": 1010,
+                  "name": "for (let value of iterable) { value += 1; console.log(value); }",
+                  "isAnswer": false
+              }
+          ],
+          "questionType": {
+              "id": 1,
+              "name": "Multiple Choice",
+              "isActive": true
+          }
+      },
+      {
+          "id": 1015,
+          "name": "Octal and binary literals",
+          "questionTypeId": 1,
+          "options": [
+              {
+                  "id": 1055,
+                  "questionId": 1010,
+                  "name": "console.log('mozilla'.toUpperCase());",
+                  "isAnswer": false
+              },
+              {
+                  "id": 1057,
+                  "questionId": 1010,
+                  "name": "function() {return 0o10 === 8 && 0O10 === 8; }",
+                  "isAnswer": true
+              },
+              {
+                  "id": 1056,
+                  "questionId": 1010,
+                  "name": "var orig = '   foo  '; console.log(orig.trim());",
+                  "isAnswer": false
+              },
+              {
+                  "id": 1058,
+                  "questionId": 1010,
+                  "name": "var x = new String('Hi baby'); console.log(x.valueOf());",
+                  "isAnswer": false
+              }
+          ],
+          "questionType": {
+              "id": 1,
+              "name": "Multiple Choice",
+              "isActive": true
+          }
+      },
+      {
+          "id": 1016,
+          "name": "Template literals",
+          "questionTypeId": 1,
+          "options": [
+              {
+                  "id": 1055,
+                  "questionId": 1010,
+                  "name": "function(){ var a = 'ba', b = 'QUX'; return `foo bar ${a + 'z'} ${b.toLowerCase()}` === 'foo bar\nbaz qux'; }",
+                  "isAnswer": true
+              },
+              {
+                  "id": 1056,
+                  "questionId": 1010,
+                  "name": "var str = 'A\uD835\uDC68'; var strIter = str[Symbol.iterator](); console.log(strIter.next().value);",
+                  "isAnswer": false
+              },
+              {
+                  "id": 1057,
+                  "questionId": 1010,
+                  "name": "myModule.doSaveTheWorld();",
+                  "isAnswer": false
+              },
+              {
+                  "id": 1058,
+                  "questionId": 1010,
+                  "name": "let name = 'Bob'; String.raw'Hi\n${name}!';",
+                  "isAnswer": false
+              }
+          ],
+          "questionType": {
+              "id": 1,
+              "name": "Multiple Choice",
+              "isActive": true
+          }
+      },
+      {
+          "id": 1017,
+          "name": "RegExp 'y' and 'u' flags",
+          "questionTypeId": 1,
+          "options": [
+              {
+                  "id": 1055,
+                  "questionId": 1010,
+                  "name": "function(){ var re = new RegExp('\\w', 'y'); re.exec('xy'); return (re.exec('xy')[0] === 'y'); }",
+                  "isAnswer": true
+              },
+              {
+                  "id": 1056,
+                  "questionId": 1010,
+                  "name": "var x = 'Mozilla'; console.log('Mozilla is ' + x.length + ' code units long');",
+                  "isAnswer": false
+              },
+              {
+                  "id": 1057,
+                  "questionId": 1010,
+                  "name": "String.fromCharCode(65, 66, 67);",
+                  "isAnswer": false
+              },
+              {
+                  "id": 1058,
+                  "questionId": 1010,
+                  "name": "String.fromCodePoint(42);",
+                  "isAnswer": false
+              }
+          ],
+          "questionType": {
+              "id": 1,
+              "name": "Multiple Choice",
+              "isActive": true
+          }
+      },
+      {
+          "id": 1018,
+          "name": "Destructuring, declarations",
+          "questionTypeId": 1,
+          "options": [
+              {
+                  "id": 1055,
+                  "questionId": 1010,
+                  "name": "function(){ var [a, , [b], c] = [5, null, [6]]; return a === 5 && b === 6 && c === undefined; }",
+                  "isAnswer": true
+              },
+              {
+                  "id": 1057,
+                  "questionId": 1010,
+                  "name": "var myString = 'Table of Contents'; document.body.innerHTML = myString.anchor('contents_anchor');",
+                  "isAnswer": false
+              },
+              {
+                  "id": 1056,
+                  "questionId": 1010,
+                  "name": "var anyString = 'Brave new world'; console.log('The character at index 0   is ' + anyString.charAt()   + '''); ",
+                  "isAnswer": false
+              },
+              {
+                  "id": 1058,
+                  "questionId": 1010,
+                  "name": "'ABC'.charCodeAt(0);",
+                  "isAnswer": false
+              }
+          ],
+          "questionType": {
+              "id": 1,
+              "name": "Multiple Choice",
+              "isActive": true
+          }
+      },
+      {
+          "id": 1019,
+          "name": "Const, let",
+          "questionTypeId": 1,
+          "options": [
+              {
+                  "id": 1055,
+                  "questionId": 1010,
+                  "name": "function(){ const foo = 123; let bar = 'abc'; return (foo === 123); }",
+                  "isAnswer": true
+              },
+              {
+                  "id": 1056,
+                  "questionId": 1010,
+                  "name": "var obj = Object.assign(o1, o2, o3);",
+                  "isAnswer": false
+              },
+              {
+                  "id": 1057,
+                  "questionId": 1010,
+                  "name": "const obj = { foo: 'bar', baz: 42 }; console.log(Object.entries(obj));",
+                  "isAnswer": false
+              },
+              {
+                  "id": 1058,
+                  "questionId": 1010,
+                  "name": "var o = Object.freeze(obj);",
+                  "isAnswer": false
+              }
+          ],
+          "questionType": {
+              "id": 1,
+              "name": "Multiple Choice",
+              "isActive": true
+          }
+      }
+  ]
+}

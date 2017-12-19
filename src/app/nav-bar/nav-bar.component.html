@@ -1,10 +1,14 @@
 <mat-toolbar color="primary" class="fixed-header">
   <mat-toolbar-row>
-      <button (click)="sidenav.toggle()" mat-mini-fab><mat-icon>menu</mat-icon></button>
+      <button (click)="sidenav.toggle()"
+      mat-mini-fab><mat-icon>menu</mat-icon>
+    </button>
+    <span class="fill-remaining-space"></span>
     <span routerLink="/home">Angular 5 Quiz</span>
     <a mat-button routerLink="/dashboard">Dashboard</a>
     <a mat-button routerLink="/technologies">Technologies</a>
     <a mat-button routerLink="/images">Images</a>
+    <a mat-button routerLink="/alpha-project">Alpha Project</a>
     <span class="example-spacer"></span>
 
     <a mat-button href="https://angular.io/" target="_blank">Angular</a>
