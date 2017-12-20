@@ -1,36 +1,60 @@
 
-<mat-card class="card" id="left">
-  <h2 class="section-title">Angular Justice League</h2>
+<mat-card class="card">
+  <h2 class="section-title">Angular Justice League Justice For All</h2>
   <div>
       <mat-progress-spinner *ngIf="!heroes"
                             class="progress-spinner"
                             [color]="'primary'"
                             [mode]="'indeterminate'">
       </mat-progress-spinner>
-      <mat-list>
-          <mat-list-item *ngFor="let hero of heroes">
-              <img *ngIf="hero.default" class="cp"
-                    (click)="seeHeroDetails(hero);" mat-list-avatar
-              src="assets/images/heroes/{{ hero.id }}-thumbnail.jpg">
-              <img *ngIf="!hero.default" (click)="seeHeroDetails(hero);"
-              mat-list-avatar src="assets/images/heroes/default.png">
-              <h3 mat-line [ngClass]="{'cp': hero.default}"
-                  (click)="seeHeroDetails(hero);">{{ hero.name }}</h3>
-              <p mat-line [ngClass]="{'cp': hero.default}" (click)="seeHeroDetails(hero);">
-                <span>{{ hero.alterEgo }}</span>
-              </p>
-              <div class="hero-actions">
-                {{ hero.likes }}
-                <mat-icon matTooltip="{{(canVote ? 'Like' : 'Cannot Like')}}"
-                          [matTooltipPosition]="'above'" class="like-icon"
-                          (click)="like(hero)">
-                favorite
-                </mat-icon>
-                <mat-icon class="remove-icon" *ngIf="!hero.default" (click)="remove(hero);">
-                delete
-                </mat-icon>
-              </div>
-          </mat-list-item>
-      </mat-list>
+      <mat-grid-list cols="2" [rowHeight]="rowHeight">
+          <mat-grid-tile>
+              <mat-list>
+                  <mat-list-item *ngFor="let hero of heroes">
+                      <img *ngIf="hero.default" class="cp"
+                            (click)="seeHeroDetails(hero);" mat-list-avatar
+                      src="assets/images/heroes/{{ hero.id }}-thumbnail.jpg">
+                      <img *ngIf="!hero.default" (click)="seeHeroDetails(hero);"
+                      mat-list-avatar src="assets/images/heroes/default.png">
+                      <h3 mat-line [ngClass]="{'cp': hero.default}"
+                          (click)="seeHeroDetails(hero);">{{ hero.name }}</h3>
+                      <p mat-line [ngClass]="{'cp': hero.default}" (click)="seeHeroDetails(hero);">
+                        <span>{{ hero.alterEgo }}</span>
+                      </p>
+                      <div class="hero-actions">
+                        {{ hero.likes }}
+                        <mat-icon matTooltip="{{(canVote ? 'Like' : 'Cannot Like')}}"
+                                  [matTooltipPosition]="'above'" class="like-icon"
+                                  (click)="like(hero)">
+                        favorite
+                        </mat-icon>
+                        <mat-icon class="remove-icon" *ngIf="!hero.default" (click)="remove(hero);">
+                        delete
+                        </mat-icon>
+                      </div>
+                  </mat-list-item>
+              </mat-list>
+          </mat-grid-tile>
+          <mat-grid-tile>
+          <div class="hero-form">
+              <h2 class="section-title">Create SuperHero</h2>
+              <form [formGroup]="newHeroForm" #form="ngForm"
+                    (ngSubmit)="createNewHero(newHeroForm.value)">
+              <mat-input-container class="input-container">
+                <input matInput type="text" placeholder="AlterEgo" formControlName="name">
+              </mat-input-container>
+              <mat-input-container class="input-container">
+                  <input matInput type="text" placeholder="Name" formControlName="alterEgo">
+              </mat-input-container>
+
+              <button mat-raised-button color="primary" type="submit" [disabled]="!newHeroForm.valid">
+                  Create
+              </button>
+              <div *ngIf="error">{{ error }}</div>
+              </form>
+          </div>
+          </mat-grid-tile>
+        </mat-grid-list>
+
   </div>
 </mat-card>

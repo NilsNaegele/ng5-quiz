@@ -20,7 +20,8 @@ export class HeroListComponent {
   heroes: Hero[];
   newHeroForm: FormGroup;
   canVote = false;
-  error: string;
+  error = '';
+  rowHeight = 650;
 
   @ViewChild('form') myNgForm;
 
@@ -51,36 +52,37 @@ export class HeroListComponent {
     }
 
     createNewHero(newHero: Hero) {
-      this.heroesService.create(newHero).then((newHeroWithId) => {
-        this.heroes.push(newHeroWithId);
+      // this.heroesService.create(newHero).then((newHeroWithId) => {
+        this.heroes.push(newHero);
         this.myNgForm.reset();
-      }, (response: Response) => {
-        if (response.status === 500) {
-          this.error = 'errorHasOccured';
-        }
-      });
-
+        this.rowHeight += 100;
+      // }, (response: Response) => {
+      //   if (response.status === 500) {
+      //     this.error = 'errorHasOccured';
+      //   }
+      // });
     }
 
     seeHeroDetails(hero): void {
-      // console.log(hero);
-      // if (hero.default) {
-      //   this.router.navigate[AppConfig.routes.heroes + '/' + hero.id];
-      // }
+      if (hero.default) {
+        // console.log(hero);
+        // this.router.navigate[AppConfig.routes.heroes + '/' + hero.id];
+      }
     }
 
     remove(heroToRemove: Hero): void {
       const dialogRef = this.dialog.open(RemoveHeroDialogComponent);
       dialogRef.afterClosed().subscribe(result => {
                 if (result) {
-                  this.heroesService.delete(heroToRemove.id).then(() => {
+                 // this.heroesService.delete(heroToRemove.id).then(() => {
                           this.heroesService.showSnackbar('Hero Removed');
-                          this.heroes = this.heroes.filter(hero => hero.id !== heroToRemove.id);
-                  }, (response: Response) => {
-                    if (response.status === 500) {
-                      this.error = 'HeroDefault';
-                    }
-                  });
+                          this.heroes = this.heroes.filter(hero => hero.name !== heroToRemove.name);
+                          this.rowHeight -= 100;
+                  // }, (response: Response) => {
+                  //   if (response.status === 500) {
+                  //     this.error = 'HeroDefault';
+                  //   }
+                  // });
                 }
       });
     }

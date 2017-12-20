@@ -6,20 +6,13 @@
   margin-bottom: 5rem;
 }
 
-#left {
-  width: 50%;
-  float: left;
-  margin-left: 20%;
+.hero-form {
+  position: absolute;
+  top: -30px;
 }
 
-#right {
-  margin-left: 50%;
-  text-align: center;
-  padding-right: 17%;
-}
-
-.clear {
-  clear: both;
+.row-height {
+  height: 650px;
 }
 
 .mat-list {
