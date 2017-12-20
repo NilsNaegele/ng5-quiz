@@ -7,6 +7,7 @@ import {
   MatCheckboxModule,
   MatChipsModule,
   MatDatepickerModule,
+  MatDialogModule,
   MatFormFieldModule,
   MatGridListModule,
   MatIconModule,
@@ -24,7 +25,8 @@ import {
   MatStepperModule,
   MatTableModule,
   MatTabsModule,
-  MatToolbarModule
+  MatToolbarModule,
+  MatTooltipModule
 } from '@angular/material';
 
 @NgModule({
@@ -36,6 +38,7 @@ import {
     MatCheckboxModule,
     MatChipsModule,
     MatDatepickerModule,
+    MatDialogModule,
     MatFormFieldModule,
     MatGridListModule,
     MatIconModule,
@@ -53,7 +56,8 @@ import {
     MatStepperModule,
     MatTableModule,
     MatTabsModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatTooltipModule
   ],
   exports: [
     MatAutocompleteModule,
@@ -63,6 +67,7 @@ import {
     MatCheckboxModule,
     MatChipsModule,
     MatDatepickerModule,
+    MatDialogModule,
     MatFormFieldModule,
     MatGridListModule,
     MatIconModule,
@@ -80,7 +85,8 @@ import {
     MatStepperModule,
     MatTableModule,
     MatTabsModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatTooltipModule
   ]
 })
 export class MaterialModule { }
