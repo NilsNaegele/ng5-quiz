@@ -3,9 +3,16 @@
   margin-bottom: 5em;
 }
 
-.hero-card{
+.hero-card {
   width: 50%;
   margin: 1em auto;
+}
+
+.progress-bar {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  height: 5px;
 }
 
 @media(max-width: 680px) {

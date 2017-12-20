@@ -1,3 +1,36 @@
-<p>
-  hero-list works!
-</p>
+
+<mat-card class="card" id="left">
+  <h2 class="section-title">Angular Justice League</h2>
+  <div>
+      <mat-progress-spinner *ngIf="!heroes"
+                            class="progress-spinner"
+                            [color]="'primary'"
+                            [mode]="'indeterminate'">
+      </mat-progress-spinner>
+      <mat-list>
+          <mat-list-item *ngFor="let hero of heroes">
+              <img *ngIf="hero.default" class="cp"
+                    (click)="seeHeroDetails(hero);" mat-list-avatar
+              src="assets/images/heroes/{{ hero.id }}-thumbnail.jpg">
+              <img *ngIf="!hero.default" (click)="seeHeroDetails(hero);"
+              mat-list-avatar src="assets/images/heroes/default.png">
+              <h3 mat-line [ngClass]="{'cp': hero.default}"
+                  (click)="seeHeroDetails(hero);">{{ hero.name }}</h3>
+              <p mat-line [ngClass]="{'cp': hero.default}" (click)="seeHeroDetails(hero);">
+                <span>{{ hero.alterEgo }}</span>
+              </p>
+              <div class="hero-actions">
+                {{ hero.likes }}
+                <mat-icon matTooltip="{{(canVote ? 'Like' : 'Cannot Like')}}"
+                          [matTooltipPosition]="'above'" class="like-icon"
+                          (click)="like(hero)">
+                favorite
+                </mat-icon>
+                <mat-icon class="remove-icon" *ngIf="!hero.default" (click)="remove(hero);">
+                delete
+                </mat-icon>
+              </div>
+          </mat-list-item>
+      </mat-list>
+  </div>
+</mat-card>

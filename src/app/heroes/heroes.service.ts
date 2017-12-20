@@ -64,9 +64,9 @@ export class HeroesService {
      return this.heroesRef.update(heroId, hero);
    }
 
-   delete(heroId: string) {
+   delete(heroId: number) {
       this.showSnackbar('Hero Removed');
-      return this.heroesRef.remove(heroId);
+      return this.heroesRef.remove(heroId + '');
    }
 
    showSnackbar(name): void {

@@ -3,7 +3,10 @@
                       [color]="'primary'"
                       [mode]="'indeterminate'">
 </mat-progress-spinner>
-
+<section class="progress-bar">
+    <mat-progress-bar [color]="'primary'" [mode]="progressBarMode">
+    </mat-progress-bar>
+</section>
 
 <div id="heroes-list" *ngIf="heroes">
           <ng-container *ngFor="let hero of heroes">
@@ -18,7 +21,7 @@
                       <div class="hero-actions">
                         {{ hero.likes }}
                       </div>
-                      <mat-icon matTooltip="{{(canVote ? 'Can Vote' : 'Cannot Vote')}}"
+                      <mat-icon matTooltip="{{(canVote ? 'Like' : 'Cannot Like')}}"
                                 [matTooltipPosition]="'above'" class="like-icon"
                                 (click)="like(hero)">favorite
                       </mat-icon>

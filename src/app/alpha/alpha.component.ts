@@ -104,6 +104,7 @@ export class AlphaComponent implements OnInit {
       return;
     }
     if ((index === 9 || index === 0) && this.pager.count === 10) {
+      this.state = (this.state === 'in' ? 'out' : 'in');
       return;
     }
     this.state = (this.state === 'in' ? 'out' : 'in');

@@ -1,0 +1,169 @@
+.card {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+#left {
+  width: 50%;
+  float: left;
+  margin-left: 20%;
+}
+
+#right {
+  margin-left: 50%;
+  text-align: center;
+  padding-right: 17%;
+}
+
+.clear {
+  clear: both;
+}
+
+.mat-list {
+  margin: 0 auto;
+  display: table;
+}
+.mat-list-text {
+  text-align: left !important;
+}
+
+.hero-actions {
+  padding-bottom: 0;
+}
+
+.hero-actions .remove-icon {
+  padding-left: 0.5em;
+  color: darkslategrey;
+  cursor: pointer;
+}
+
+form {
+  display: grid;
+  width: 80%;
+  margin: 0 auto;
+
+}
+
+form .mat-raised-button {
+  color: white;
+  background: #3f51b5;
+  width: 50%;
+  margin: 0 auto;
+}
+
+form .mat-form-field {
+  width: 100%;
+}
+
+.progress-bar {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  height: 5px;
+}
+
+@media(max-width: 680px) {
+  .hero-card {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .mat-card {
+    margin-bottom: 2em;
+  }
+}
+
+a, .cp {
+  cursor: pointer;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: 300;
+  padding: 1em 0 0;
+}
+
+.flex-spacer {
+  flex-grow: 1;
+}
+
+.progress-spinner {
+  height: 60px !important;
+  margin: 2em auto;
+}
+
+snack-bar-container {
+  background: #3f51b5 !important;
+}
+
+.mat-menu-content {
+  background: #3f51b5;
+}
+
+.mat-menu-item, .mat-menu-item .mat-icon {
+  color: white;
+  font-weight: 100;
+}
+
+.hero-actions {
+  align-items: center;
+  display: flex;
+  padding-bottom: 1em;
+}
+
+.like-icon {
+  color: #DC143C;
+  cursor: pointer;
+}
+
+.mat-raised-button[disabled] {
+  background: #bbb !important;
+}
+
+.mat-dialog-container {
+  background: #3f51b5;
+  color: white;
+}
+
+.mat-dialog-content {
+  text-align: center;
+  padding: 1em 24px !important;
+}
+
+.mat-dialog-title {
+  text-align: center;
+}
+
+.hero-header-image {
+  background-size: cover;
+}
+
+.mat-card-image {
+  margin-bottom: -28px !important;
+  border-top: 1px solid #eee;
+}
+
+.mat-list-avatar {
+  height: 55px !important;
+  width: 55px !important;
+}
+
+
+@media (max-width: 680px) {
+  #left {
+    width: 100%;
+    float: none;
+    margin: 0 auto;
+  }
+
+  #right {
+    margin: 1em auto 0;
+    width: 90%;
+    float: none;
+    padding: 0;
+  }
+}
