@@ -1,5 +1,5 @@
 import { Injectable, EventEmitter } from '@angular/core';
-import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
+import { AngularFireDatabase, AngularFireList, AngularFireObject } from 'angularfire2/database';
 import { MatSnackBar, MatSnackBarConfig } from '@angular/material';
 
 import { AppConfig } from '../config/app.config';
@@ -13,12 +13,17 @@ export class HeroesService {
   request$: EventEmitter<any>;
 
   heroesRef: AngularFireList<any>;
+  heroesRefObject: AngularFireObject<any>;
   heroes: Observable<any>;
+  key = '';
 
   constructor(private db: AngularFireDatabase, private snackBar: MatSnackBar) {
     this.heroesRef = db.list('/heroes');
+    this.heroesRefObject = db.object('heroes');
     this.heroes = this.heroesRef.snapshotChanges().map(changes => {
-      return changes.map(change => ({ key: change.payload.key, ...change.payload.val() }));
+      return changes.map(change => ({
+        key: change.payload.key,
+        ...change.payload.val() }));
     });
     this.request$ = new EventEmitter();
    }
@@ -42,17 +47,16 @@ export class HeroesService {
 
    }
 
-   like(hero: Hero) {
-    //  if (this.checkIfUserCanVote()) {
-    //    localStorage.setItem('votes', '' + (Number(localStorage.getItem('votes')) + 1));
-    //    hero.likes += 1;
-    //    this.showSnackbar('Like Saved');
-    //    this.request$.emit('finished');
-    //   return this.heroesRef.push(hero).catch(error => this.handleError(error));
-    //  } else {
-    //    this.showSnackbar('Maximum Hero Likes');
-    //    return Observable.throw('maximum votes');
-    //  }
+   like(hero: Hero): Promise<void> {
+    if (this.checkIfUserCanVote) {
+      localStorage.setItem('votes', '' + (Number(localStorage.getItem('votes')) + 1));
+      hero.likes += 1;
+      this.showSnackbar('Like Saved');
+      this.request$.emit('finished');
+      return this.heroesRef.update(hero.id + '', { likes: hero.likes });
+      } else {
+        this.showSnackbar('Maximum Hero Likes');
+      }
     }
 
     checkIfUserCanVote(): boolean {

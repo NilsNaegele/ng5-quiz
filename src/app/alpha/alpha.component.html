@@ -1,6 +1,6 @@
 <mat-card class="card" [@flyInOut]="state">
   <section class="example-section">
-    <h1>{{ quiz.name }}</h1>
+    <h1 class="section-title">{{ quiz.name }}</h1>
     <mat-form-field class="select-margin">
       <mat-select class="right" [(ngModel)]="quizName" (change)="loadQuiz(quizName)">
         <mat-option *ngFor="let quiz of quizzes" [value]="quiz.id">

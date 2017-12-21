@@ -12,7 +12,7 @@ export const AppConfig: IAppConfig = {
   endpoints: {
     heroes: 'https://ng5-quiz.firebaseio.com/heroes'
   },
-  votesLimit: 3,
+  votesLimit: 10,
   topHeroesLimit: 4,
   snackBarDuration: 3000,
   repositoryURL: 'https://github.com/NilsNaegele/ng5-quiz'

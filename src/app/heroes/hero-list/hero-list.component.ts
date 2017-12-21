@@ -43,24 +43,21 @@ export class HeroListComponent {
     });
     }
 
-    like(hero: Hero) {
-      // this.heroesService.like(hero).subscribe(() => {
-      //   this.canVote = this.heroesService.checkIfUserCanVote();
-      // }, (error: Response) => {
-      //   LoggerService.error('maximum votes limit reached', error);
-      // });
+    like(hero: any) {
+      this.canVote = this.heroesService.checkIfUserCanVote();
+      if (this.canVote) {
+          this.heroesService.like(hero).then(() => {
+          console.log('returned like success');
+          }, (error) => {
+            console.log('returned error: ' + error);
+          });
     }
+  }
 
     createNewHero(newHero: Hero) {
-      // this.heroesService.create(newHero).then((newHeroWithId) => {
         this.heroes.push(newHero);
         this.myNgForm.reset();
         this.rowHeight += 100;
-      // }, (response: Response) => {
-      //   if (response.status === 500) {
-      //     this.error = 'errorHasOccured';
-      //   }
-      // });
     }
 
     seeHeroDetails(hero): void {
@@ -74,15 +71,9 @@ export class HeroListComponent {
       const dialogRef = this.dialog.open(RemoveHeroDialogComponent);
       dialogRef.afterClosed().subscribe(result => {
                 if (result) {
-                 // this.heroesService.delete(heroToRemove.id).then(() => {
-                          this.heroesService.showSnackbar('Hero Removed');
-                          this.heroes = this.heroes.filter(hero => hero.name !== heroToRemove.name);
-                          this.rowHeight -= 100;
-                  // }, (response: Response) => {
-                  //   if (response.status === 500) {
-                  //     this.error = 'HeroDefault';
-                  //   }
-                  // });
+                  this.heroesService.showSnackbar('Hero Removed');
+                  this.heroes = this.heroes.filter(hero => hero.name !== heroToRemove.name);
+                  this.rowHeight -= 100;
                 }
       });
     }

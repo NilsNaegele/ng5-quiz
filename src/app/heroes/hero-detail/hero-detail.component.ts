@@ -18,7 +18,7 @@ export class HeroDetailComponent {
               private location: Location,
               private router: Router,
               private heroesService: HeroesService) {
-                this.activatedRoute.params.subscribe((params: any) => {
+               this.activatedRoute.params.subscribe((params: any) => {
                       if (params['id']) {
                         this.heroesService.getHeroById(params['id'])
                                           .subscribe((hero: Hero) => {
@@ -28,15 +28,15 @@ export class HeroDetailComponent {
                 });
                }
       like(hero: Hero) {
-        // return new Promise((resolve, reject) => {
-        //     this.heroesService.like(hero).subscribe(() => {
-        //       this.canVote = this.heroesService.checkIfUserCanVote();
-        //       resolve(true);
-        //     }, (error) => {
-        //       reject(error);
-        //     });
-        // });
+        this.canVote = this.heroesService.checkIfUserCanVote();
+        if (this.canVote) {
+            this.heroesService.like(hero).then(() => {
+            console.log('returned like success');
+            }, (error) => {
+              console.log('returned error: ' + error);
+            });
       }
+    }
 
       navigateTop() {
         this.router.navigate(['/top-heroes']);

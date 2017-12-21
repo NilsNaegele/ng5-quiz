@@ -31,15 +31,15 @@ export class HeroTopComponent {
   }
 
   like(hero: Hero) {
-    // return new Promise((resolve, reject) => {
-    //   this.heroesService.like(hero).subscribe(() => {
-    //         this.canVote = this.heroesService.checkIfUserCanVote();
-    //         resolve(true);
-    //   }, (error) => {
-    //     reject(error);
-    //   });
-    // });
+    this.canVote = this.heroesService.checkIfUserCanVote();
+    if (this.canVote) {
+        this.heroesService.like(hero).then(() => {
+        console.log('returned like success');
+        }, (error) => {
+          console.log('returned error: ' + error);
+        });
   }
+}
 
   seeHeroDetails(hero): void {
     if (hero.default) {
