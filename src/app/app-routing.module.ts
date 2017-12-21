@@ -50,6 +50,10 @@ const routes: Routes = [
     loadChildren: 'app/heroes/heroes.module#HeroesModule'
   },
   {
+    path: 'start-coding',
+    loadChildren: 'app/quiz2/quiz2.module#Quiz2Module'
+  },
+  {
     path: '**',
     redirectTo: ''
   }

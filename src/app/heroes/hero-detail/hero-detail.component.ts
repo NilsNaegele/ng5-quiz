@@ -22,7 +22,11 @@ export class HeroDetailComponent {
                       if (params['id']) {
                         this.heroesService.getHeroById(params['id'])
                                           .subscribe((hero: Hero) => {
-                              this.hero = hero;
+                                  if (Object.keys(hero).length === 0) {
+                                      this.navigateTop();
+                                  }
+                                  this.hero = hero;
+
                         });
                       }
                 });
