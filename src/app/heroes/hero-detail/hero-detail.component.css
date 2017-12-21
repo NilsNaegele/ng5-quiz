@@ -1,0 +1,48 @@
+.card {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.hero-header-image {
+  background-size: cover;
+}
+
+.image-height {
+  max-height: 471px;
+}
+
+.progress-bar {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  height: 5px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: 500;
+}
+
+.flex-spacer {
+  flex-grow: 1;
+}
+
+.progress-spinner {
+  height: 60px !important;
+  margin: 6em auto;
+}
+
+.hero-actions {
+  align-items: center;
+  display: flex;
+  padding-bottom: 1em;
+}
+
+.like-icon {
+  color: #DC143C;
+  cursor: pointer;
+}

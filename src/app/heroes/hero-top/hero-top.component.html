@@ -26,7 +26,7 @@
                                 (click)="like(hero)">favorite
                       </mat-icon>
                   </mat-card-header>
-                  <img mat-card-image src="assets/images/heroes/{{ hero.id }}.jpg">
+                  <img mat-card-image class="cp" (click)="seeHeroDetails(hero);" src="assets/images/heroes/{{ hero.id }}.jpg">
               </mat-card>
           </ng-container>
 </div>

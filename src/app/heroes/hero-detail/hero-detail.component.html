@@ -1,3 +1,42 @@
-<p>
-  hero-detail works!
-</p>
+<mat-progress-spinner *ngIf="!hero"
+                       class="progress-spinner"
+                       [color]="'primary'"
+                       [mode]="'indeterminate'">
+</mat-progress-spinner>
+
+  <ng-container *ngIf="hero">
+    <mat-card class="card">
+        <h1 class="section-title">We are all Open Source Heroes</h1>
+        <mat-card-header>
+            <div mat-card-avatar class="hero-header-image"
+                 [ngStyle]="{'background-image': 'url(../../../assets/images/heroes/' + hero[0].id + '-thumbnail.jpg'}">
+            </div>
+            <mat-card-title>{{ hero[0].name }}</mat-card-title>
+            <mat-card-subtitle>{{ hero[0].alterEgo }}</mat-card-subtitle>
+            <div class="flex-spacer"></div>
+            <div class="hero-actions">
+                {{ hero[0].likes }}
+                <mat-icon matTooltip="{{(canVote ? 'Like' : 'Cannot Like')}}"
+                          [matTooltipPosition]="'above'" class="like-icon" (click)="like(hero)">
+                          favorite
+                </mat-icon>
+            </div>
+        </mat-card-header>
+        <img mat-card-image class="image-height" src="../../../assets/images/heroes/{{ hero[0].id }}.jpg" alt="Photo of {{ hero[0].name }}">
+        <mat-card-content>
+          <p>
+            We honor Angular.
+            We honor Open Source.
+            We honor performance.
+            We honor honesty.
+            We honor kindness.
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button (click)="navigateTop()">Top</button>
+          <button mat-button (click)="back()">Back</button>
+        </mat-card-actions>
+
+    </mat-card>
+    </ng-container>
+

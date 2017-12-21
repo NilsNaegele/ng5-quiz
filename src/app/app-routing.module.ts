@@ -46,7 +46,7 @@ const routes: Routes = [
     component: HeroTopComponent
   },
   {
-    path: 'heroes',
+    path: AppConfig.routes.heroes,
     loadChildren: 'app/heroes/heroes.module#HeroesModule'
   },
   {

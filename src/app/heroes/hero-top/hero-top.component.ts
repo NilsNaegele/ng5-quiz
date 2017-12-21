@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { Hero } from '../hero.model';
 import { HeroesService } from '../heroes.service';
@@ -15,7 +16,9 @@ export class HeroTopComponent {
   canVote = false;
   progressBarMode: string;
 
-  constructor(private heroesService: HeroesService, private progressBarService: ProgressBarService) {
+  constructor(private router: Router,
+              private heroesService: HeroesService,
+              private progressBarService: ProgressBarService) {
     this.canVote = this.heroesService.checkIfUserCanVote();
     this.heroesService.getAllHeroes().subscribe((heroes) => {
         this.heroes = heroes.sort((a, b) => {
@@ -36,6 +39,13 @@ export class HeroTopComponent {
     //     reject(error);
     //   });
     // });
+  }
+
+  seeHeroDetails(hero): void {
+    if (hero.default) {
+      this.router.navigate(['heroes/' + hero.id]);
+      // this.router.navigate[AppConfig.routes.heroes + '/' + hero.id];
+    }
   }
 
 }

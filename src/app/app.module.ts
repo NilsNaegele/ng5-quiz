@@ -80,8 +80,8 @@ import { HeroesService } from './heroes/heroes.service';
                                    InMemoryDataService, { dataEncapsulation: false})
   ],
   providers: [QuizService, TechnologyService, MessageService,
-              ImageService, SidenavService, UtilsService, ProgressBarService, HeroesService
-            // { provide: AppConfig, useValue: AppConfig }
+              ImageService, SidenavService, UtilsService, ProgressBarService, HeroesService,
+             { provide: APP_CONFIG, useValue: AppConfig }
           ],
   bootstrap: [AppComponent]
 })

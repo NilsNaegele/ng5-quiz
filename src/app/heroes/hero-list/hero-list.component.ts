@@ -65,7 +65,7 @@ export class HeroListComponent {
 
     seeHeroDetails(hero): void {
       if (hero.default) {
-        // console.log(hero);
+        this.router.navigate(['heroes/' + hero.id]);
         // this.router.navigate[AppConfig.routes.heroes + '/' + hero.id];
       }
     }
