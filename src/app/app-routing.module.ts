@@ -54,6 +54,10 @@ const routes: Routes = [
     loadChildren: 'app/quiz2/quiz2.module#Quiz2Module'
   },
   {
+    path: 'pwa-center',
+    loadChildren: 'app/pwa-center/pwa.module#PwaModule'
+  },
+  {
     path: '**',
     redirectTo: ''
   }

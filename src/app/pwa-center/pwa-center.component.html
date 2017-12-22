@@ -1,0 +1,22 @@
+<mat-grid-list cols="4">
+    <!-- <div class="container-loading-shade" *ngIf="isLoadingResults">
+      <mat-spinner color="accent" *ngIf="isLoadingResults"></mat-spinner>
+    </div> -->
+      <mat-grid-tile *ngFor="let app of apps | async">
+      <mat-card class="card">
+      <mat-card-header>
+        <mat-card-title><h2>{{ app.name }}</h2></mat-card-title>
+      </mat-card-header>
+        <img mat-card-image [src]="app.imageUrl" alt="app.name + 'logo'">
+        <!-- <mat-card-content>
+          <p>{{ app.description }}</p>
+        </mat-card-content> -->
+        <mat-card-actions>
+          <a mat-button [href]="app.url" target="_blank" rel="noopener" color="accent">
+            Visit PWA
+          </a>
+          <a mat-button [routerLink]="['/pwa-center/', app.id]">DETAILS</a>
+        </mat-card-actions>
+      </mat-card>
+      </mat-grid-tile>
+    </mat-grid-list>
