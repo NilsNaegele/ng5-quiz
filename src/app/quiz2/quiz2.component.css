@@ -4,3 +4,22 @@
   margin-right: auto;
   margin-top: 10rem;
 }
+
+.sub-title {
+  max-width: 600px;
+  font-size: 1.5em;
+}
+
+.subtitle-height {
+  height: 18em;
+}
+
+.button-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.mat-divider {
+  margin-bottom: 1em;
+}

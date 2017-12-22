@@ -10,7 +10,8 @@ import { Quiz2RoutingModule } from './quiz2-routing.module';
 
 
 @NgModule({
-  imports: [CommonModule, FormsModule, MaterialModule, Quiz2RoutingModule],
-  declarations: [ Quiz2Component ]
+  imports: [ CommonModule, FormsModule, MaterialModule, Quiz2RoutingModule ],
+  declarations: [ Quiz2Component ],
+  providers: [ Quiz2Service ]
 })
 export class Quiz2Module { }

@@ -1,3 +1,63 @@
-<mat-card class="card">
-  ABC XYZ
-</mat-card>
+<mat-card class="card" *ngIf="!isResultsView">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title class="sub-title">Question N° {{ quiz2Service.answers.length + 1 }}</mat-card-title>
+      <mat-card-subtitle class="subtitle-height">
+        <pre>
+          <code class="sub-title">
+            {{ quiz2Service.currentQuestion.value }}
+          </code>
+      </pre>
+      </mat-card-subtitle>
+    </mat-card-header>
+    <mat-divider></mat-divider>
+    <mat-card-content>
+     <p *ngFor="let answer of quiz2Service.currentQuestion.answers; let i = index;">
+              <mat-checkbox
+                #check
+                (click)="answerChosen(i); check.checked = true;"
+                [disabled]="check.checked">
+                {{ answer.value }}
+              </mat-checkbox>
+      </p>
+    </mat-card-content>
+
+    <mat-card-actions class="button-row">
+      <button *ngIf="quiz2Service.answers.length !== 0" mat-raised-button color="warn"
+      (click)="quiz2Service.previousQuestion();">
+      <i class="material-icons">undo</i>
+    </button>
+    </mat-card-actions>
+  </mat-card>
+
+  <mat-card *ngIf="isResultsView" class="card">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>Congratulations:</mat-card-title>
+        <mat-card-subtitle>
+          You scored {{ this.quiz2Service.results }} % !!!
+        </mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image src="../../assets/congratulations.jpg" alt="Photo of Congratulations">
+      <mat-card-content>
+            'Kindness is the most important SuperPower.' Igor Minar, Lead Angular Team.
+            <div class="button-row">
+                <button mat-icon-button color="warn">
+                    <mat-icon aria-label="icon-button with a heart icon">favorite</mat-icon>
+               </button>
+               <button mat-icon-button color="warn">
+                  <mat-icon aria-label="icon-button with a heart icon">favorite</mat-icon>
+               </button>
+               <button mat-icon-button color="warn">
+                    <mat-icon aria-label="icon-button with a heart icon">favorite</mat-icon>
+               </button>
+              </div>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="primary" routerLink="/home" mat-button>
+          Home
+        </button>
+      </mat-card-actions>
+    </mat-card>
+
+
