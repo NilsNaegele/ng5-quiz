@@ -1,23 +1,26 @@
-<mat-card class="card" *ngIf="(app$ | async)[0] as app">
+<mat-card class="card" *ngIf="app">
     <mat-card-header>
       <div mat-card-avatar class="example-header-image"></div>
-      <mat-card-title><h1>{{ app.name }}</h1></mat-card-title>
+      <mat-card-title><h1>{{ app[0].name }}</h1></mat-card-title>
       <mat-card-subtitle>
         Mobile && Progressive Web Apps are the future!
       </mat-card-subtitle>
     </mat-card-header>
-    <img mat-card-image [src]="app.imageUrl" [alt]="app.name + 'logo'">
+    <img mat-card-image [src]="app[0].imageUrl" [alt]="app[0].name + 'logo'">
     <mat-card-content>
       <p>
-          {{ app.description }}
+          {{ app[0].description }}
       </p>
     </mat-card-content>
     <mat-card-actions>
-      <a mat-raised-button color="primary" [href]="app.url" target="_blank" mat-button>
+      <a mat-raised-button color="primary" [href]="app[0].url" target="_blank" mat-button>
         Visit PWA
       </a>
       <a mat-raised-button color="primary" [routerLink]="['/pwa-center']" mat-button>
         HOME
+      </a>
+      <a mat-raised-button color="warn" [routerLink]="['/pwa-center/share']" mat-button>
+        SHARE
       </a>
     </mat-card-actions>
   </mat-card>

@@ -1,5 +1,5 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { ActivatedRoute, ParamMap } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
 
 import { PwaService } from '../pwa.service';
@@ -10,17 +10,27 @@ import { PwaService } from '../pwa.service';
   styleUrls: ['./pwa-center-detail.component.css']
 })
 export class PwaCenterDetailComponent implements OnInit {
-  app$: Observable<any>;
+  app;
 
-  constructor(private activedRoute: ActivatedRoute,
+  constructor(private activatedRoute: ActivatedRoute, private router: Router,
               private pwaService: PwaService) {
-
+                this.activatedRoute.params.subscribe((params: any) => {
+                  if (params['id']) {
+                    this.pwaService.getAppById(params['id'])
+                                      .subscribe((app: any) => {
+                              if (Object.keys(app).length === 0) {
+                                  this.navigatePwasList();
+                              }
+                              this.app = app;
+                    });
+                  }
+            });
                }
 
-  ngOnInit() {
-    this.app$ = this.activedRoute.paramMap.switchMap((params: any) =>
-      this.pwaService.getAppById(params.get('id'))
-    );
+  navigatePwasList() {
+    this.router.navigate(['/pwa-center']);
   }
+
+  ngOnInit() { }
 
 }

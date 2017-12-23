@@ -1,0 +1,23 @@
+<mat-card class="card">
+      <mat-card-header>
+          <mat-card-title><h2>Share a PWA</h2></mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <form class="pwa-form" [formGroup]="formPWA" #pwaUrl>
+            <mat-form-field class="pwa-full-width">
+                <input matInput placeholder="URL" formControlName="url" type="url" name="url"
+                        required>
+                <mat-hint>Enter a valid PWA URL!</mat-hint>
+                <mat-error>
+                  Valid URL is <strong>required</strong>
+                </mat-error>
+              </mat-form-field>
+        </form>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button (click)="share()" color="primary">SHARE</button>
+        <button type="button" (click)="formPWA.reset()"
+                mat-button color="accent">CLEAR</button>
+      </mat-card-actions>
+
+</mat-card>
