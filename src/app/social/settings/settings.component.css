@@ -1,45 +1,23 @@
 .card {
-  max-width: 600px;
-  min-height: 550px;
+  max-width: 800px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 5rem;
+  margin-top: 10rem;
 }
 
-.signin {
-  min-height: 450px;
-}
-
-.section-title {
-  text-align: center;
-  font-size: 2em;
-  font-weight: 500;
-  padding: 1em 0 0;
-}
-.login-title {
-  text-align: center;
-  font-size: 1.3em;
-  font-weight: 500;
-}
-
-.sign-button {
-  float: right;
-  padding-top: 60px;
-}
-
-.authentication-form {
+.settings-form {
   min-width: 150px;
-  max-width: 600px;
+  max-width: 500px;
   width: 100%;
 }
 
-.authentication-full-width {
+.settings-full-width {
   width: 100%;
 }
 
-.error-message {
-    color: red;
-  }
+.right {
+  float: right;
+}
 
 @media only screen and (max-width: 992px) {
   .card {

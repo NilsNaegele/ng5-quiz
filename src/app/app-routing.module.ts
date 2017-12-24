@@ -11,11 +11,18 @@ import { TechnologyDetailComponent } from './technology-detail/technology-detail
 import { ImagesComponent } from './images/images.component';
 import { AlphaComponent } from './alpha/alpha.component';
 import { HeroTopComponent } from './heroes/hero-top/hero-top.component';
+import { BasicLawsComponent } from './basic-laws/basic-laws.component';
+import { BasicLawDetailComponent } from './basic-law-detail/basic-law-detail.component';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'home',
     component: HomeComponent
+  },
+  {
+    path: '',
+    redirectTo: 'home',
+    pathMatch: 'full'
   },
   {
     path: 'quiz',
@@ -62,8 +69,16 @@ const routes: Routes = [
     loadChildren: 'app/social/social.module#SocialModule'
   },
   {
+    path: 'basic-laws/:id',
+    component: BasicLawDetailComponent
+  },
+  {
+    path: 'basic-laws',
+    component: BasicLawsComponent
+  },
+  {
     path: '**',
-    redirectTo: ''
+    redirectTo: 'home'
   }
 ];
 

@@ -1,5 +1,7 @@
-<mat-card class="card">
-      <mat-card-title class="section-title">{{ title }}</mat-card-title>
+<mat-card class="card" [ngClass]="{'signin': isSignIn}">
+      <mat-card-title class="section-title">
+        {{ title }}
+      </mat-card-title>
     <mat-card-subtitle class="login-title">
       <a routerLink="/social/login" routerLinkActive="active"
       *ngIf="authenticationType === 'register'">Already Registered?</a>
@@ -21,7 +23,7 @@
             <input matInput placeholder="Password" type="password" formControlName="password">
         </mat-form-field>
         <div class="sign-button">
-        <button mat-raised-button color="warn" type="submit">Sign Up</button>
+        <button mat-raised-button color="warn" type="submit">{{ title }}</button>
         </div>
     </form>
 </mat-card>

@@ -15,6 +15,7 @@ import { MaterialModule } from './material.module';
 import { AppRoutingModule } from './app-routing.module';
 
 import { CoreModule } from './core/core.module';
+import { SocialModule } from './social/social.module';
 
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
@@ -43,6 +44,9 @@ import { SidenavService } from './sidenav.service';
 import { ProgressBarService } from './shared/services/progress-bar.service';
 import { UtilsService } from './shared/services/utils.service';
 import { HeroesService } from './heroes/heroes.service';
+import { BasicLawService } from './basic-law.service';
+import { BasicLawsComponent } from './basic-laws/basic-laws.component';
+import { BasicLawDetailComponent } from './basic-law-detail/basic-law-detail.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +64,9 @@ import { HeroesService } from './heroes/heroes.service';
     ImagesComponent,
     AddMessageComponent,
     AlphaComponent,
-    HeroTopComponent
+    HeroTopComponent,
+    BasicLawsComponent,
+    BasicLawDetailComponent
   ],
   entryComponents: [
     AppComponent,
@@ -75,13 +81,14 @@ import { HeroesService } from './heroes/heroes.service';
     AngularFireAuthModule,
     AngularFireModule.initializeApp(environment.firebase),
     CoreModule,
+    SocialModule,
     AppRoutingModule,
     MaterialModule,
     FlexLayoutModule,
     HttpClientInMemoryWebApiModule.forRoot(
                                    InMemoryDataService, { dataEncapsulation: false})
   ],
-  providers: [QuizService, TechnologyService, MessageService,
+  providers: [QuizService, TechnologyService, MessageService, BasicLawService,
               ImageService, SidenavService, UtilsService, ProgressBarService, HeroesService,
              { provide: APP_CONFIG, useValue: AppConfig }
           ],

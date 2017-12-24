@@ -8,17 +8,22 @@
     <a mat-button routerLink="/dashboard">Dashboard</a>
     <a mat-button routerLink="/technologies">Technologies</a>
     <a mat-button routerLink="/images">Images</a>
-    <a mat-button routerLink="/alpha-project">Alpha Project</a>
+    <a mat-button routerLink="/alpha-project">Alpha</a>
     <a mat-button routerLink="/top-heroes">Heroes</a>
     <a mat-button routerLink="/heroes">List</a>
     <a mat-button routerLink="/pwa-center">PWA</a>
     <a mat-button routerLink="/social">Social</a>
+    <a mat-button routerLink="/basic-laws">Law</a>
     <span class="example-spacer"></span>
-    <a mat-button routerLink="/social/login">Sign In</a>
+    <div *ngIf="!currentUser">
+    <a mat-button routerLink="/social/login" >Sign In</a>
     <a mat-button routerLink="/social/register">Sign Up</a>
+    </div>
+    <div *ngIf="currentUser">
+        <a mat-button>Hi {{ currentUser }}</a>
+        <a mat-button (click)="signOut()">Sign Out</a>
+        <a mat-button routerLink="/social/settings">Settings</a>
+    </div>
     <a mat-button href="https://angular.io/" target="_blank">Angular</a>
-    <!-- <a mat-button href="https://cli.angular.io/" target="_blank">Angular CLI</a>
-    <a mat-button href="https://material.angular.io/" target="_blank">Angular Material</a>
-    <a mat-button href="https://firebase.google.com/" target="_blank">Firebase</a> -->
   </mat-toolbar-row>
 </mat-toolbar>

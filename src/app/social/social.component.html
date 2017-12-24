@@ -16,7 +16,7 @@
                     <h4>Popular Tags</h4>
                 <mat-chip-list>
                   <mat-chip color="warn" selected="true" *ngFor="let data of tags | async">
-                   <span (click)="setListTo('all', {tag: data.tag})">{{ data.tag }}</span>
+                   <span class="cp" (click)="setListTo('all', {tag: data.tag})">{{ data.tag }}</span>
                   </mat-chip>
                 </mat-chip-list>
               </div>

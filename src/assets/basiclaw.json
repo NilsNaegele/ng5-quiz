@@ -1,0 +1,118 @@
+[ null, {
+    "id": 1,
+    "title" : "Article 1",
+    "german": "Die Würde des Menschen ist unantastbar. Sie zu achten und zu schützen ist Verpflichtung aller staatlichen Gewalt.",
+    "english" : "Human dignity is inviolable. To protect and respect is the duty of all State Authority.",
+    "imageUrl" : "https://pbs.twimg.com/profile_images/917984491490172931/Q9E4u5ra.jpg"
+  }, {
+    "id": 2,
+    "title" : "Article 2",
+    "german": "Jeder hat das Recht auf die freie Entfaltung seiner Persönlichkeit, soweit er nicht die Rechte anderer verletzt und nicht gegen die verfassungsmäßige Ordnung oder das Sittengesetz verstößt.",
+    "english" : "Everybody is allowed to freely develop their personality, so long as nobody else is infringed and the laws are respected.",
+    "imageUrl" : "https://pbs.twimg.com/profile_images/917984491490172931/Q9E4u5ra.jpg"
+  },
+  {
+    "id": 3,
+    "title" : "Article 3",
+    "german": "Alle Menschen sind vor dem Gesetz gleich. Männer und Frauen sind gleichberechtigt.",
+    "english" : "All people are equal in front of the law. Men and women have the same rights.",
+    "imageUrl" : "https://pbs.twimg.com/profile_images/917984491490172931/Q9E4u5ra.jpg"
+  }, {
+    "id": 4,
+    "title" : "Article 4",
+    "german": "Die Freiheit des Glaubens, des Gewissens und die Freiheit des religiösen und weltanschaulichen Bekenntnisses sind unverletzlich.",
+    "english" : "Freedom of belief, consciousness as well as religion and view of the world.",
+    "imageUrl" : "https://pbs.twimg.com/profile_images/917984491490172931/Q9E4u5ra.jpg"
+  }, {
+    "id": 5,
+    "title" : "Article 5",
+    "german": "Jeder hat das Recht, seine Meinung in Wort, Schrift und Bild frei zu äußern und zu verbreiten und sich aus allgemein zugänglichen Quellen ungehindert zu unterrichten.",
+    "english" : "Freedom of speech.",
+    "imageUrl" : "https://pbs.twimg.com/profile_images/917984491490172931/Q9E4u5ra.jpg"
+  }, {
+    "id": 6,
+    "title" : "Article 6",
+    "german": " Ehe und Familie stehen unter dem besonderen Schutze der staatlichen Ordnung.",
+    "english" : "Marriage and family are under special protection from the State Authorities.",
+    "imageUrl" : "https://pbs.twimg.com/profile_images/917984491490172931/Q9E4u5ra.jpg"
+  }, {
+    "id": 7,
+    "title" : "Article 7",
+    "german": "Das gesamte Schulwesen steht unter der Aufsicht des Staates.",
+    "english" : "The entire school system is under control of the State.",
+    "imageUrl" : "https://pbs.twimg.com/profile_images/917984491490172931/Q9E4u5ra.jpg"
+  }, {
+    "id": 8,
+    "title" : "Article 8",
+    "german": "Alle Deutschen haben das Recht, sich ohne Anmeldung oder Erlaubnis friedlich und ohne Waffen zu versammeln.",
+    "english" : "All Germans are allowed to peacefully assemble without weapons.",
+    "imageUrl" : "https://pbs.twimg.com/profile_images/917984491490172931/Q9E4u5ra.jpg"
+  }, {
+    "id": 9,
+    "title" : "Article 9",
+    "german": "Alle Deutschen haben das Recht, Vereine und Gesellschaften zu bilden.",
+    "english" : "All Germans are allowed to create associations and societies.",
+    "imageUrl" : "https://pbs.twimg.com/profile_images/917984491490172931/Q9E4u5ra.jpg"
+  }, {
+    "id": 10,
+    "title" : "Article 10",
+    "german": "Das Briefgeheimnis sowie das Post- und Fernmeldegeheimnis sind unverletzlich.",
+    "english" : "Secrecy of correspondence is inviolable.",
+    "imageUrl" : "https://pbs.twimg.com/profile_images/917984491490172931/Q9E4u5ra.jpg"
+  },
+  {
+    "id": 11,
+    "title" : "Article 11",
+    "german": "Alle Deutschen genießen Freizügigkeit im ganzen Bundesgebiet.",
+    "english" : "All Germans have the freedom to move anywhere they want in Germany.",
+    "imageUrl" : "https://pbs.twimg.com/profile_images/917984491490172931/Q9E4u5ra.jpg"
+  }, {
+    "id": 12,
+    "title" : "Article 12",
+    "german": "Alle Deutschen haben das Recht, Beruf, Arbeitsplatz und Ausbildungsstätte frei zu wählen.",
+    "english" : "All Germans have the right to freely choose their profession.",
+    "imageUrl" : "https://pbs.twimg.com/profile_images/917984491490172931/Q9E4u5ra.jpg"
+  }, {
+    "id": 13,
+    "title" : "Article 13",
+    "german": "Die Wohnung ist unverletzlich.",
+    "english" : "Home is inviolable.",
+    "imageUrl" : "https://pbs.twimg.com/profile_images/917984491490172931/Q9E4u5ra.jpg"
+  }, {
+    "id": 14,
+    "title" : "Article 14",
+    "german": "Das Eigentum und das Erbrecht werden gewährleistet. Inhalt und Schranken werden durch die Gesetze bestimmt.",
+    "english" : "Property and inheritance are guaranteed.",
+    "imageUrl" : "https://pbs.twimg.com/profile_images/917984491490172931/Q9E4u5ra.jpg"
+  }, {
+    "id": 15,
+    "title" : "Article 15",
+    "german": "Grund und Boden, Naturschätze und Produktionsmittel können zum Zwecke der Vergesellschaftung durch ein Gesetz, das Art und Ausmaß der Entschädigung regelt, in Gemeineigentum oder in andere Formen der Gemeinwirtschaft überführt werden.",
+    "english" : "Property can be nationalised.",
+    "imageUrl" : "https://pbs.twimg.com/profile_images/917984491490172931/Q9E4u5ra.jpg"
+  }, {
+    "id": 16,
+    "title" : "Article 16",
+    "german": "Die deutsche Staatsangehörigkeit darf nicht entzogen werden. Kein Deutscher darf an das Ausland ausgeliefert werden.",
+    "english" : "The German nationality cannot be withdrawn. No German can be extradited to foreign country.",
+    "imageUrl" : "https://pbs.twimg.com/profile_images/917984491490172931/Q9E4u5ra.jpg"
+  }, {
+    "id": 17,
+    "title" : "Article 17",
+    "german": "Jedermann hat das Recht, sich einzeln oder in Gemeinschaft mit anderen schriftlich mit Bitten oder Beschwerden an die zuständigen Stellen und an die Volksvertretung zu wenden.",
+    "english" : "Everybody is authorized to contact State Authorities.",
+    "imageUrl" : "https://pbs.twimg.com/profile_images/917984491490172931/Q9E4u5ra.jpg"
+  }, {
+    "id": 18,
+    "title" : "Article 18",
+    "german": "Wer diese Grundrechte mißbraucht zum Kampfe gegen die freiheitliche demokratische Grundordnung, verwirkt diese Grundrechte.",
+    "english" : "These Basic Rights can be revoked if the Basic Rights are abused to fight against our Free, Democratic Country.",
+    "imageUrl" : "https://pbs.twimg.com/profile_images/917984491490172931/Q9E4u5ra.jpg"
+  },
+  {
+    "id": 19,
+    "title" : "Article 1",
+    "german": "Die Würde des Menschen ist unantastbar. Sie zu achten und zu schützen ist Verpflichtung aller staatlichen Gewalt.",
+    "english" : "Human dignity is inviolable. To protect and respect is the duty of all State Authority.",
+    "imageUrl" : "https://pbs.twimg.com/profile_images/917984491490172931/Q9E4u5ra.jpg"
+  } ]

@@ -17,20 +17,20 @@ export class SocialComponent implements OnInit {
   tags: Observable<any[]>;
   tagsLoaded = false;
 
+  active = true;
+
   constructor(private router: Router,
               private tagsService: TagsService,
               private userService: UserService) { }
 
   ngOnInit() {
-    // if (this.userService.getAuthenticated()) {
-    //   this.isAuthenticated = true;
-    //   console.log(this.userService.getAuthenticated());
-    //   if (this.isAuthenticated) {
-    //     this.setListTo('feed');
-    //   } else {
-        this.setListTo('all');
-    //   }
-    // }
+    if (this.userService.getAuthenticated()) {
+      this.isAuthenticated = true;
+       if (this.isAuthenticated) {
+        this.setListTo('feed');
+       }
+     }
+    this.setListTo('all');
     this.getAllTags();
   }
 
