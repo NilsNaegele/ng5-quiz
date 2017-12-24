@@ -1,0 +1,177 @@
+{
+  "articles": [
+    {
+      "title": "my articale",
+      "slug": "my-articale-nxzan5",
+      "body": "hello bello",
+      "createdAt": "2017-12-23T20:22:28.687Z",
+      "updatedAt": "2017-12-23T20:22:28.687Z",
+      "tagList": [],
+      "description": "demo article",
+      "author": {
+        "username": "admin00000",
+        "bio": null,
+        "image": "https://static.productionready.io/images/smiley-cyrus.jpg",
+        "following": false
+      },
+      "favorited": false,
+      "favoritesCount": 1
+    },
+    {
+      "title": "2",
+      "slug": "2-seow1u",
+      "body": "2",
+      "createdAt": "2017-12-23T17:42:11.575Z",
+      "updatedAt": "2017-12-23T17:42:11.575Z",
+      "tagList": [],
+      "description": "1",
+      "author": {
+        "username": "thinkpoint",
+        "bio": null,
+        "image": "https://static.productionready.io/images/smiley-cyrus.jpg",
+        "following": false
+      },
+      "favorited": false,
+      "favoritesCount": 1
+    },
+    {
+      "title": "1",
+      "slug": "1-o4idq",
+      "body": "1",
+      "createdAt": "2017-12-23T17:30:41.809Z",
+      "updatedAt": "2017-12-23T17:30:41.809Z",
+      "tagList": [],
+      "description": "1",
+      "author": {
+        "username": "thinkpoint",
+        "bio": null,
+        "image": "https://static.productionready.io/images/smiley-cyrus.jpg",
+        "following": false
+      },
+      "favorited": false,
+      "favoritesCount": 0
+    },
+    {
+      "title": "wkwkwkwkwkwk hahahah ckckckc kckckc",
+      "slug": "wkwkwkwkwkwk-hahahah-ckckckc-kckckc-91792u",
+      "body": "wkwkwkwkwkwk hahahah ckckckc kckckcwkwkwkwkwkwk hahahah ckckckc kckckcwkwkwkwkwkwk hahahah ckckckc kckckcwkwkwkwkwkwk hahahah ckckckc kckckc",
+      "createdAt": "2017-12-23T15:30:43.076Z",
+      "updatedAt": "2017-12-23T15:30:43.076Z",
+      "tagList": [],
+      "description": "wkwkwkwkwkwk hahahah ckckckc kckckcwkwkwkwkwkwk hahahah ckckckc kckckcwkwkwkwkwkwk hahahah ckckckc kckckc",
+      "author": {
+        "username": "lololo",
+        "bio": null,
+        "image": "https://static.productionready.io/images/smiley-cyrus.jpg",
+        "following": false
+      },
+      "favorited": false,
+      "favoritesCount": 0
+    },
+    {
+      "title": "sdfgsdfsdfgssdf",
+      "slug": "sdfgsdfsdfgssdf-3wtvbi",
+      "body": "sdfgsdfgs",
+      "createdAt": "2017-12-23T14:50:16.722Z",
+      "updatedAt": "2017-12-23T14:50:16.722Z",
+      "tagList": [],
+      "description": "sdfg",
+      "author": {
+        "username": "tjondro_utomo",
+        "bio": null,
+        "image": "https://static.productionready.io/images/smiley-cyrus.jpg",
+        "following": false
+      },
+      "favorited": false,
+      "favoritesCount": 0
+    },
+    {
+      "title": "Test",
+      "slug": "test-llw4py",
+      "body": "TEst 22",
+      "createdAt": "2017-12-23T13:50:38.798Z",
+      "updatedAt": "2017-12-23T13:50:38.798Z",
+      "tagList": [],
+      "description": "Test",
+      "author": {
+        "username": "markoni",
+        "bio": null,
+        "image": "https://static.productionready.io/images/smiley-cyrus.jpg",
+        "following": false
+      },
+      "favorited": false,
+      "favoritesCount": 2
+    },
+    {
+      "title": "Hello World",
+      "slug": "hello-world-na3xl4",
+      "body": "Heloo.....",
+      "createdAt": "2017-12-23T11:48:08.524Z",
+      "updatedAt": "2017-12-23T11:48:08.524Z",
+      "tagList": [],
+      "description": "About a world where",
+      "author": {
+        "username": "whc1g10",
+        "bio": null,
+        "image": "https://static.productionready.io/images/smiley-cyrus.jpg",
+        "following": false
+      },
+      "favorited": false,
+      "favoritesCount": 3
+    },
+    {
+      "title": "hello world",
+      "slug": "hello-world-kmb8b9",
+      "body": "hello world",
+      "createdAt": "2017-12-23T09:34:49.134Z",
+      "updatedAt": "2017-12-23T09:34:49.134Z",
+      "tagList": [],
+      "description": "hello world",
+      "author": {
+        "username": "hello1234567",
+        "bio": null,
+        "image": "https://static.productionready.io/images/smiley-cyrus.jpg",
+        "following": false
+      },
+      "favorited": false,
+      "favoritesCount": 3
+    },
+    {
+      "title": "123",
+      "slug": "123-2br0so",
+      "body": "31231",
+      "createdAt": "2017-12-23T07:53:25.736Z",
+      "updatedAt": "2017-12-23T07:53:25.736Z",
+      "tagList": [
+        "12312"
+      ],
+      "description": "12",
+      "author": {
+        "username": "cyjme",
+        "bio": null,
+        "image": "https://static.productionready.io/images/smiley-cyrus.jpg",
+        "following": false
+      },
+      "favorited": false,
+      "favoritesCount": 1
+    },
+    {
+      "title": "asd",
+      "slug": "asd-rd4r8k",
+      "body": "asd",
+      "createdAt": "2017-12-23T03:57:24.054Z",
+      "updatedAt": "2017-12-23T03:57:24.054Z",
+      "tagList": [],
+      "description": "sad",
+      "author": {
+        "username": "asqwert",
+        "bio": null,
+        "image": "https://static.productionready.io/images/smiley-cyrus.jpg",
+        "following": false
+      },
+      "favorited": false,
+      "favoritesCount": 0
+    }
+  ],
+  "articlesCount": 10
+}

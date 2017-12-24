@@ -58,6 +58,10 @@ const routes: Routes = [
     loadChildren: 'app/pwa-center/pwa.module#PwaModule'
   },
   {
+    path: 'social',
+    loadChildren: 'app/social/social.module#SocialModule'
+  },
+  {
     path: '**',
     redirectTo: ''
   }

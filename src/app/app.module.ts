@@ -5,6 +5,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HttpModule } from '@angular/http';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { AngularFireModule } from 'angularfire2';
+import { AngularFireAuth, AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { environment } from '../environments/environment';
 
@@ -71,6 +72,7 @@ import { HeroesService } from './heroes/heroes.service';
     HttpClientModule,
     HttpModule,
     AngularFireDatabaseModule,
+    AngularFireAuthModule,
     AngularFireModule.initializeApp(environment.firebase),
     CoreModule,
     AppRoutingModule,

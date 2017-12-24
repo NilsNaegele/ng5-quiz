@@ -1,0 +1,19 @@
+<!-- <mat-list role="list">
+    <mat-list-item role="listitem" *ngFor="let result of results | async">
+      <img [src]="result.author.image">
+      <h1>{{ result.author.username }}</h1>
+      <span>{{ result.createdAt | date: 'longDate' }}</span>
+    </mat-list-item>
+</mat-list> -->
+
+
+<mat-card class="card" *ngFor="let result of results | async">
+    <mat-card-header>
+      <img mat-card-avatar class="image" [src]="result.author.image">
+      <mat-card-title>{{ result.author.username }}</mat-card-title>
+      <mat-card-subtitle>{{ result.createdAt | date: 'longDate' }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        {{ result.description }}
+    </mat-card-content>
+  </mat-card>
