@@ -1,6 +1,6 @@
 .card {
   max-width: 600px;
-  min-height: 400px;
+  min-height: 500px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 5rem;
@@ -19,8 +19,8 @@
 }
 
 .sign-button {
-  float:right;
-  padding-top: 10px;
+  float: right;
+  padding-top: 60px;
 }
 
 .authentication-form {

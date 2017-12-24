@@ -93,7 +93,6 @@ export class AlphaComponent implements OnInit {
       if (this.configuration.autoMove) {
         this.move(this.pager.index + 1);
       }
-      console.log(this.pager.index);
   }
 
   move(index: number) {

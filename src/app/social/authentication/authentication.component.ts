@@ -28,7 +28,6 @@ export class AuthenticationComponent implements OnInit {
   submitForm() {
     this.isSubmitting = true;
     const credentials = this.authenticationForm.value;
-    console.log(credentials);
     if (!credentials.email || !credentials.password || !this.validateEmail(credentials.email)) {
       this.errorMessage = 'All fields and a valid email are required';
       return;

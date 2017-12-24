@@ -35,7 +35,6 @@ export class ArticlesService {
 
 
   getAllArticles(): Observable<any[]> {
-    console.log(this.articles);
     return this.articles;
   }
 
