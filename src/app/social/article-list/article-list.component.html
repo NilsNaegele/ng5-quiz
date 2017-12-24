@@ -7,7 +7,7 @@
 </mat-list> -->
 
 
-<mat-card class="card" *ngFor="let result of results | async">
+<mat-card *ngFor="let result of results | async">
     <mat-card-header>
       <img mat-card-avatar class="image" [src]="result.author.image">
       <mat-card-title>{{ result.author.username }}</mat-card-title>

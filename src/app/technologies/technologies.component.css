@@ -26,8 +26,7 @@
   background-color: rgb(252, 86, 86);
   color: rgb(255, 255, 255);
   margin: .5em;
-  padding: .3em 0;
-  height: 1.6em;
+  height: 2.2em !important;
   width: 20em !important;
   border-radius: 5px;
 }
@@ -57,14 +56,14 @@
 }
 .technologies .badge {
   display: inline-block;
-  font-size: small;
+  /* font-size: small; */
   color: white;
-  padding: 0.9em 0.7em 0 0.7em;
+  padding: 0.9em 0.7em 0 0.7em !important;
   background-color: rgb(2, 3, 4);
-  line-height: 1em;
+  /* line-height: 1em; */
   position: relative;
   left: -27px;
-  height: 1.8em;
+  /* height: 1.8em !important; */
   margin-right: .8em;
   border-radius: 4px 0 0 4px;
 }

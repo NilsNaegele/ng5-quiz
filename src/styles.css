@@ -1,3 +1,4 @@
+@import "~bootstrap/dist/css/bootstrap-grid.css";
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
 * {

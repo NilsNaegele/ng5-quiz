@@ -1,27 +1,25 @@
 <mat-card class="card">
       <mat-card-title class="section-title">Angular 5 Knowledge Share</mat-card-title>
-      <mat-card-subtitle class="sub-title">Popular Tags</mat-card-subtitle>
-      <mat-grid-list cols=3 rowHeight="2:1">
-        <mat-grid-tile colspan="2" rowspan="12">
-          <mat-tab-group>
-            <mat-tab label="Your Feed">
-               You
-               <app-article-list></app-article-list>
-            </mat-tab>
-            <mat-tab label="Global Feed">
-              Global
-            </mat-tab>
-          </mat-tab-group>
-        </mat-grid-tile>
-        <mat-grid-tile colspan="1" rowspan="2">
-          <mat-chip-list>
-            <mat-chip color="warn" selected="true" *ngFor="let data of tags | async">
-             <span (click)="setListTo('all', {tag: data.tag})">{{ data.tag }}</span>
-            </mat-chip>
-          </mat-chip-list>
-        </mat-grid-tile>
-        <!-- <mat-grid-tile colspan="2" rowspan="12">
-            <app-article-list></app-article-list>
-        </mat-grid-tile> -->
-      </mat-grid-list>
+      <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <mat-tab-group>
+                  <mat-tab label="Your Feed">
+                     <app-article-list></app-article-list>
+                  </mat-tab>
+                  <mat-tab label="Global Feed">
+                    Global Feed
+                  </mat-tab>
+                </mat-tab-group>
+                </div>
+                <div class="col-md-4">
+                    <h4>Popular Tags</h4>
+                <mat-chip-list>
+                  <mat-chip color="warn" selected="true" *ngFor="let data of tags | async">
+                   <span (click)="setListTo('all', {tag: data.tag})">{{ data.tag }}</span>
+                  </mat-chip>
+                </mat-chip-list>
+              </div>
+        </div>
+      </div>
 </mat-card>

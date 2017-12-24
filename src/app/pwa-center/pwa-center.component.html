@@ -1,8 +1,6 @@
-<mat-grid-list cols="4">
-    <!-- <div class="container-loading-shade" *ngIf="isLoadingResults">
-      <mat-spinner color="accent" *ngIf="isLoadingResults"></mat-spinner>
-    </div> -->
-      <mat-grid-tile *ngFor="let app of apps | async">
+<div class="container card-position">
+    <div class="row">
+      <div *ngFor="let app of apps | async" class="col-12 col-sm-6 col-md-4 col-lg-3">
       <mat-card class="card">
       <mat-card-header>
         <mat-card-title><h2>{{ app.name }}</h2></mat-card-title>
@@ -15,5 +13,7 @@
           <a mat-button [routerLink]="['/pwa-center/', app.id]">DETAILS</a>
         </mat-card-actions>
       </mat-card>
-      </mat-grid-tile>
-    </mat-grid-list>
+    </div>
+  </div>
+</div>
+

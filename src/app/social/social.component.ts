@@ -40,13 +40,10 @@ export class SocialComponent implements OnInit {
   }
 
   setListTo(type: string = '', filters: Object = {}) {
-    console.log(type, this.isAuthenticated);
-    console.log(type, filters);
     if (type === 'feed' && !this.isAuthenticated) {
         this.router.navigateByUrl('/social/login');
         return;
     }
-
     this.articleListConfig = { type: type, filters: filters };
   }
 
