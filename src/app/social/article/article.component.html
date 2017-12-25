@@ -1,0 +1,32 @@
+<mat-card class="card">
+<div class="container">
+  <h1>{{ article.title }}</h1>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <div [innerHTML]="article.body | marked"></div>
+    </div>
+    <div class="col-md-4">
+        <h4>Popular Tags</h4>
+    <mat-chip-list>
+      <mat-chip color="warn" selected="true" *ngFor="let tag of article.tagList">
+       {{ tag }}
+      </mat-chip>
+    </mat-chip-list>
+  </div>
+  </div>
+  <hr>
+  <div class="article-actions">
+
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-md-8 offset-md-2">
+      <div *appShowAuthenticated="false">
+        <a [routerLink]="['/social/login']">Sign In</a>
+        or <a [routerLink]="['/social/register']">Sign Up</a> to add a comment to this article.
+      </div>
+    </div>
+  </div>
+</div>
+</mat-card>

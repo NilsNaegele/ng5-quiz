@@ -60,7 +60,7 @@ export class EditorComponent implements OnInit {
     this.isSubmitting = true;
     this.updateArticle(this.articleForm.value);
     this.articleService.create(this.article);
-    // this.router.navigateByUrl('/social/editor/' + this.article.title);
+    this.router.navigateByUrl('/social/article/' + this.article.slug);
   }
 
 }

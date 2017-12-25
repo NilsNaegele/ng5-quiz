@@ -9,7 +9,11 @@ import { SocialComponent } from '../social/social.component';
 import { AuthenticationComponent } from './authentication/authentication.component';
 import { ArticleListComponent } from './article-list/article-list.component';
 import { SettingsComponent } from './settings/settings.component';
+import { EditorComponent } from './editor/editor.component';
+import { ArticleComponent } from './article/article.component';
+
 import { ShowAuthenticatedDirective } from './show-authenticated.user';
+import { MarkedPipe } from './marked.pipe';
 
 import { UserService } from './user.service';
 import { TagsService } from './tags.service';
@@ -17,7 +21,9 @@ import { ArticlesService } from './articles-service';
 import { AuthGuard } from './auth-guard.service';
 import { JwtService } from './jwt.service';
 import { EditableArticleResolver } from './editable-article.resolver';
-import { EditorComponent } from './editor/editor.component';
+import { ArticleResolver } from './article.resolver';
+
+
 
 
 @NgModule({
@@ -34,10 +40,12 @@ import { EditorComponent } from './editor/editor.component';
     ArticleListComponent,
     ShowAuthenticatedDirective,
     SettingsComponent,
-    EditorComponent
+    EditorComponent,
+    ArticleComponent,
+    MarkedPipe
   ],
   exports: [ ShowAuthenticatedDirective ],
   providers: [ UserService, TagsService, ArticlesService,
-               JwtService, AuthGuard, EditableArticleResolver ]
+               JwtService, AuthGuard, EditableArticleResolver, ArticleResolver ]
 })
 export class SocialModule { }

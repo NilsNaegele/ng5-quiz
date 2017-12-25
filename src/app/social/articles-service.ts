@@ -33,8 +33,27 @@ export class ArticlesService {
     this.articlesObjectRef.update({ size: newSize });
   }
 
-  delete() {
+  deleteArticlesObject() {
     this.articlesObjectRef.remove();
+  }
+
+  delete(articleId: string) {
+    return this.articlesRef.remove(articleId + '');
+ }
+
+ favorite(article: any): Promise<void> {
+    localStorage.setItem('favorite', '' + (Number(localStorage.getItem('favorite')) + 1));
+    article.favoritesCount += 1;
+    return this.articlesRef.update(article.id + '', { favoritesCount: article.favoritesCount });
+  }
+
+  unfavorite(article: any): Promise<void> {
+    localStorage.setItem('favorite', '' + (Number(localStorage.getItem('favorite')) - 1));
+    if ((Number(localStorage.getItem('favorite'))) > 0) {
+    article.favoritesCount -= 1;
+    return this.articlesRef.update(article.id + '', { favoritesCount: article.favoritesCount });
+    }
+    return Promise.resolve(null);
   }
 
 
