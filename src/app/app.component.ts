@@ -32,7 +32,7 @@ export class AppComponent implements OnDestroy {
   }
 
   addMessage() {
-    console.log('addMessage clicked');
+    // console.log('addMessage clicked');
     const dialogConfig = new MatDialogConfig();
     dialogConfig.viewContainerRef = this.viewContainerRef;
     const dialog = this.matDialog.open(AddMessageComponent, dialogConfig);

@@ -27,8 +27,8 @@ export class BasicLawService {
   }
 
   getBasicLawById(basicLawId): Observable<any> {
-    return this.basicLaw.map(basicLaw => {
-      return basicLaw.filter(basicLaw => basicLaw.key === basicLawId);
+    return this.basicLaw.map(bLaw => {
+      return bLaw.filter(law => law.key === basicLawId);
     });
 
   }

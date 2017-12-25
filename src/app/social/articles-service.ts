@@ -21,8 +21,12 @@ export class ArticlesService {
     });
   }
 
-  save(newName: string) {
-    this.articlesObjectRef.set({ name: newName });
+  save(article: any) {
+    this.articlesObjectRef.set({ article });
+  }
+
+  create(article: any) {
+    return this.articlesRef.push(article);
   }
 
   update(newSize: string) {

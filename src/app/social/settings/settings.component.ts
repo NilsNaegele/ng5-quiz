@@ -36,7 +36,7 @@ export class SettingsComponent implements OnInit {
       this.updateUser(this.settingsForm.value);
 
       this.userService.update(this.user).then((response) => {
-        console.log(response);
+        // console.log(response);
       });
       this.router.navigateByUrl('/social');
     }

@@ -29,9 +29,9 @@ export class AuthenticationComponent implements OnInit {
   submitForm() {
     this.isSubmitting = true;
     const credentials = this.authenticationForm.value;
-    console.log(credentials.email);
-    console.log(credentials.password);
-    console.log(this.validateEmail(credentials.email));
+    // console.log(credentials.email);
+    // console.log(credentials.password);
+    // console.log(this.validateEmail(credentials.email));
 
     if (!credentials.email || !credentials.password || !this.validateEmail(credentials.email)) {
       this.errorMessage = 'All fields and a valid email are required';
@@ -39,7 +39,7 @@ export class AuthenticationComponent implements OnInit {
     }
       if (this.authenticationType === 'login') {
         console.log(credentials.email);
-      this.userService.login(credentials.email, credentials.password).then((response) => {
+      this.userService.login(credentials.email.trim(), credentials.password).then((response) => {
         if (response === 'success') {
           this.router.navigateByUrl('/social');
         }
