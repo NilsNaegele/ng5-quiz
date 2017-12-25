@@ -7,9 +7,9 @@
 </mat-list> -->
 
 <ng-container *ngFor="let result of results | async">
-<mat-card *ngIf="result.author.image">
+<mat-card *ngIf="result.author">
     <mat-card-header>
-      <img mat-card-avatar class="image" [src]="result.author.image">
+      <img mat-card-avatar class="image" [src]="result.author?.image">
       <mat-card-title>{{ result.author.username }}</mat-card-title>
       <mat-card-subtitle>{{ result.createdAt | date: 'longDate' }}</mat-card-subtitle>
     </mat-card-header>
